@@ -1,0 +1,69 @@
+//============================================================================
+// Name        : 240_HW1.cpp
+// Author      : Rae Jones
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+int main() {
+
+	//creates all variables needed to read file contents
+	string operation;
+
+	string line;
+
+	int num1;
+
+	int num2;
+
+	int final;
+
+	//opens and reads file
+	  ifstream myfile ("input.txt");
+	  if (myfile.is_open())
+	  {
+	    getline (myfile,line);
+	    operation = line;
+
+	    getline (myfile,line);
+	    num1 = stoi(line);
+
+	    getline (myfile,line);
+	    num2 = stoi(line);
+
+	    myfile.close();
+	  }
+
+	  else cout << "Unable to open file";
+
+	//if statement handles different operations
+	if (operation == "add") {
+		final = num1 + num2;
+	}
+
+	else if (operation == "subtract") {
+		final = num1 - num2;
+	}
+
+	else if(operation == "divide") {
+		final = num1 / num2;
+	}
+
+	else {
+		final = num1 * num2;
+	}
+
+	//prints results of equation
+	cout << "The result of " << operation << " on " << num1 << " and " << num2 << " is below" << endl;
+
+	cout << final << endl;
+
+	return 0;
+	myfile.close();
+}
