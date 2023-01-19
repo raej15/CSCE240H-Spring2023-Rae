@@ -3,7 +3,7 @@
 // Author      : Rae Jones
 // Version     :
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : HW 1 -- CSCE 240, calculates from file
 //============================================================================
 
 #include <iostream>
@@ -64,6 +64,11 @@ int main() {
 
 	cout << final << endl;
 
+	  ofstream fileOutput;
+	  fileOutput.open ("output.txt");
+	  fileOutput << "The result of " << operation << " on " << num1 << " and " << num2 << " is below \n" << final;
+	  fileOutput.close();
+	  return 0;
+
 	return 0;
-	myfile.close();
 }
