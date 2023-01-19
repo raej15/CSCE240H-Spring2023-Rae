@@ -59,16 +59,11 @@ int main() {
 		final = num1 * num2;
 	}
 
-	//prints results of equation
-	cout << "The result of " << operation << " on " << num1 << " and " << num2 << " is below" << endl;
-
-	cout << final << endl;
-
+	//outputs results of equation to file
 	  ofstream fileOutput;
 	  fileOutput.open ("output.txt");
 	  fileOutput << "The result of " << operation << " on " << num1 << " and " << num2 << " is below \n" << final;
 	  fileOutput.close();
-	  return 0;
 
 	return 0;
 }
