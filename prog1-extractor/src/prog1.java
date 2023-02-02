@@ -12,7 +12,7 @@ public class prog1 {
 
 
         try {
-            File cdcData = new File("/Users/sarajones/desktop/CSCE240H-Spring2023-Rae/prog1-extractor/data/scabies-CDC.txt");
+            File cdcData = new File("./prog1-extractor/data/scabies-CDC.txt");
             Scanner myReader = new Scanner(cdcData);
             //System.out.println(directory.getAbsolutePath());
             while (myReader.hasNextLine()) {
