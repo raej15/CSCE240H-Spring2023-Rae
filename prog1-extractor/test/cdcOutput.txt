@@ -23,6 +23,6 @@ What can travelers do to prevent scabies?
 	Travelers can avoid scabies by not touching or having close skin-to-skin contact with a person who has a rash or who is itching. Avoid touching or handling a sick person’s clothing or bedding.
 	Scabies mites die when you wash bedding and clothing using hot water and hot dryer cycles or dry-clean the items. Items that cannot be dry-cleaned or laundered can be disinfested by storing them in a closed plastic bag for more than 72 hours. Scabies mites generally do not survive more than 2 to 3 days away from human skin.
 
-Lines in file: 30
-Words in file: 406
-Chars in file: 2385
+Lines in original file: 30
+Words in original file: 406
+Chars in original file: 2385

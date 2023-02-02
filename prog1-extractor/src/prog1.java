@@ -2,11 +2,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.io.PrintWriter;
-//import Files.Lines;
 
 /**
  * Takes diseases as input, reports stats, and writes info to output file
- * Used Programiz as a source for writing to files easily: https://www.programiz.com/java-programming/printwriter
+ * Used Programiz as a source for writing-to-files with PrintWriter: https://www.programiz.com/java-programming/printwriter
  * @author Rae Jones
  */
 public class prog1 {
@@ -16,23 +15,22 @@ public class prog1 {
             int cdcLines = 0;
             int cdcChars = 0;
             int cdcWordCount =0;
-            //String cdcData;
 
             File cdcData = new File("./prog1-extractor/data/scabies-CDC.txt");
             Scanner fileReader = new Scanner(cdcData);
-            PrintWriter output = new PrintWriter("output.txt");
+            PrintWriter cdcOutput = new PrintWriter("./prog1-extractor/test/cdcOutput.txt");
 
-            output.println("The CDC Reports:\n");
+            cdcOutput.println("The CDC Reports:\n");
 
             while (fileReader.hasNextLine()) {
             
                 String data = fileReader.nextLine();
                 if (data.length() > 0) {
                     if (!(data.substring(data.length() - 1, data.length()).equals(":")) & !(data.substring(data.length() - 1, data.length()).equals("?"))) {
-                        output.println("\t" + data);
+                        cdcOutput.println("\t" + data);
                     }
                     else {
-                        output.println(data);
+                        cdcOutput.println(data);
                     }
                 }
                 cdcLines++;
@@ -52,11 +50,11 @@ public class prog1 {
 
             }
             
-            output.println("\nLines in file: " + cdcLines);
-            output.println("Words in file: " + cdcWordCount);
-            output.println("Chars in file: " + cdcChars);
+            cdcOutput.println("\nLines in original file: " + cdcLines);
+            cdcOutput.println("Words in original file: " + cdcWordCount);
+            cdcOutput.println("Chars in original file: " + cdcChars);
             
-            output.close();
+            cdcOutput.close();
             fileReader.close();
         }
 
@@ -65,15 +63,51 @@ public class prog1 {
             e.printStackTrace();
         } 
 
-     /*   System.out.println("\n\nWebMD Reports:\n");
         try {
-            File cdcData = new File("./prog1-extractor/data/scabies-webMD.txt");
-            Scanner fileReader = new Scanner(cdcData);
-            //System.out.println(directory.getAbsolutePath());
+            int webMDLines = 0;
+            int webMDChars = 0;
+            int webMDWordCount =0;
+            //String cdcData;
+
+            File webMDData = new File("./prog1-extractor/data/scabies-webMD.txt");
+            Scanner fileReader = new Scanner(webMDData);
+            PrintWriter webMDOutput = new PrintWriter("./prog1-extractor/test/webMDOutput.txt");
+
+            webMDOutput.println("WebMD Reports:\n");
+
             while (fileReader.hasNextLine()) {
+            
                 String data = fileReader.nextLine();
-                System.out.println(data);
+                if (data.length() > 0) {
+                    if (!(data.substring(data.length() - 1, data.length()).equals(":")) & !(data.substring(data.length() - 1, data.length()).equals("?"))) {
+                        webMDOutput.println("\t" + data);
+                    }
+                    else {
+                        webMDOutput.println(data);
+                    }
+                }
+                webMDLines++;
+
+                if (data.length() > 0) {
+                    webMDWordCount++;
+                }
+
+                for(int i=0; i < data.length(); i++) {
+                    webMDChars++;
+
+                    if (data.substring(i, i+1).equals(" ") ) {
+                        webMDWordCount++;
+                    } 
+                }
+                
+
             }
+            
+            webMDOutput.println("\nLines in original file: " + webMDLines);
+            webMDOutput.println("Words in original file: " + webMDWordCount);
+            webMDOutput.println("Chars in original file: " + webMDChars);
+            
+            webMDOutput.close();
             fileReader.close();
         }
 
@@ -81,7 +115,6 @@ public class prog1 {
             System.out.println("no file");
             e.printStackTrace();
         } 
-        */
         
     } 
 
