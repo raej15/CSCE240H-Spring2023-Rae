@@ -27,7 +27,14 @@ public class prog1 {
             while (fileReader.hasNextLine()) {
             
                 String data = fileReader.nextLine();
-                output.println(data);
+                if (data.length() > 0) {
+                    if (!(data.substring(data.length() - 1, data.length()).equals(":")) & !(data.substring(data.length() - 1, data.length()).equals("?"))) {
+                        output.println("\t" + data);
+                    }
+                    else {
+                        output.println(data);
+                    }
+                }
                 cdcLines++;
 
                 if (data.length() > 0) {
