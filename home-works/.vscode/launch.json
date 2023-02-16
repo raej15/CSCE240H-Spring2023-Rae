@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch OOGeometricPropertyCalculator",
+            "request": "launch",
+            "mainClass": "HW3redo.OOGeometricPropertyCalculator",
+            "projectName": "home-works_c6b8a32b"
+        },
+        {
+            "name": "C/C++ Runner: Debug Session",
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "/Users/sarajones/Desktop/CSCE240H-Spring2023-Rae/home-works",
+            "program": "/Users/sarajones/Desktop/CSCE240H-Spring2023-Rae/home-works/build/Debug/outDebug"
+        },
+        {
+            "name": "C/C++: clang++ build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: clang++ build active file"
+        }
+    ]
+}
