@@ -122,7 +122,7 @@ public class prog1 {
         }
 
         else {
-            System.out.println("I do not have any information about that. Try asking about scabies next time. \nEXITING PROGRAM");
+            System.out.println("I do not have any information about that. Try asking about scabies next times. \nEXITING PROGRAM");
             System.exit(0);
         }
 
