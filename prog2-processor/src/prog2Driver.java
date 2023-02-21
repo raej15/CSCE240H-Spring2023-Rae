@@ -184,6 +184,9 @@ public class prog2Driver {
             else if (userInput.contains("typ") ) {
                 System.out.println(qnAs.get(19).getAnswer());
             }
+            else {
+                System.out.println("I can't help you with that yet. Try asking something different, or in a different way.");
+            }
             
         /* System.out.println("Searching for " + keyword);
         for (int i =0; i<qnAs.size(); i++) {
@@ -199,6 +202,8 @@ public class prog2Driver {
             
             userInput = keyboard.nextLine();
         }
+
+       System.exit(0);
         
 
         /* 
