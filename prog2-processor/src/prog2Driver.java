@@ -48,13 +48,13 @@ public class prog2Driver {
                 qnAs.add(currQnA);
                 currIndex++;
 
-                qnAs.get(currIndex).setQuestion(currLine);
-                System.out.println("question found");
+                qnAs.get(currIndex).setQuestion(currLine.trim());
+                //System.out.println("question found");
             } else {
                 ///this is an answer
                 //add line to current answer
-                qnAs.get(currIndex).addToAnswer(currLine);
-                System.out.println("answer found");
+                qnAs.get(currIndex).addToAnswer(currLine.trim());
+                //System.out.println("answer found");
             }
           
         }
@@ -62,32 +62,47 @@ public class prog2Driver {
        //System.out.print(cdcInfo);
     
         fileReader.close();
+        /*
         qnAs.get(1).print();
         qnAs.get(2).print();
         qnAs.get(3).print();
+        */
     }
 
     catch (FileNotFoundException e) {
         System.out.println("no file");
         e.printStackTrace();
     }
-
     
+    System.out.println("What questions do you have about scabies?\n Enter STOP to exit chat");
+    String userInput = keyboard.nextLine();
+
+    while (!userInput.equalsIgnoreCase("stop")) {
+        if(userInput.contains("What is scabies?") | userInput.contains("what is scabies?")) {
+            System.out.println(qnAs.get(1).getAnswer());
+        }
+
+        else if (userInput.contains("symptom")) {
+            System.out.println(qnAs.get(2).getQuestion());
+            System.out.println(qnAs.get(2).getAnswer());
+        }
+        else if (userInput.contains("who") | userInput.contains("Who")) {
+            System.out.println(qnAs.get(3).getAnswer());
+        }
+        else if (userInput.contains("travel") ) {
+            System.out.println(qnAs.get(4).getAnswer());
+        }
+        userInput = keyboard.nextLine();
+    }
+    
+
     /* 
-    //System.out.println("What questions do you have about scabies?");
-    String userInput = "What is scabies?";
-    //keyboard.nextLine();
+    System.out.println("POOOOOOOOOOOP");
+    System.out.println(qnAs.get(2).getAnswer());
 
-    if(userInput.contains("What is scabies?")) {
-        int indexQuestion = cdcInfo.indexOf(userInput);
-        int indexSAnswer = cdcInfo.toString().indexOf("\nC", indexQuestion);
-
-        System.out.println(cdcInfo.substring(indexQuestion + 1, indexSAnswer +1));
-
-        
-
-    } */
-    
+    System.out.println("trying fancy way");
+    System.out.println(qnAs.));
+    */
 
    } 
     
