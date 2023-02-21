@@ -6,8 +6,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
 
-//make sure to credit w3schools for pattern matching
-
+/**
+ * takes input files and answers questions based on them
+ * Credit: https://www.w3schools.com/java/java_regex.asp for help with pattern matching
+ * @author Rae Jones
+ */
 public class prog2Driver {
    public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
@@ -148,7 +151,7 @@ public class prog2Driver {
                 
             userInput = keyboard.nextLine();
         }
-        
+
        System.exit(0);
        keyboard.close();
    } 
