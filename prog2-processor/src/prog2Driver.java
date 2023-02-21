@@ -184,8 +184,11 @@ public class prog2Driver {
             else if (userInput.contains("typ") ) {
                 System.out.println(qnAs.get(19).getAnswer());
             }
+            else if (userInput.contains("hi") | userInput.contains("hello")) {
+                System.out.println("Hello! What questions do you  have about scabies?");
+            }
             else {
-                System.out.println("I can't help you with that yet. Try asking something different, or in a different way.");
+                System.out.println("I can't help you with that yet. Try asking something different, or in a different way.\nPlease check that you havent misspelled your question.");
             }
             
         /* System.out.println("Searching for " + keyword);
