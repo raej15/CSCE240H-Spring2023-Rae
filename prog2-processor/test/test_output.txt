@@ -1,3 +1,6 @@
+What disease are you looking for information about? (input Scabies)
+User: scabies
+
 What questions do you have about scabies?
  Enter STOP to exit chat
  

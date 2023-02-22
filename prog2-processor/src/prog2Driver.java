@@ -87,71 +87,77 @@ public class prog2Driver {
             System.out.println("no file");
             e.printStackTrace();
         }
-        
-        System.out.println("What questions do you have about scabies?\n Enter STOP to exit chat");
-        String userInput = keyboard.nextLine();
-
-        while (!userInput.equalsIgnoreCase("stop")) {
-            if(userInput.contains("What is scabies") | userInput.contains("what is scabies")) {
-                System.out.println(qnAs.get(1).getAnswer());
-                System.out.println("Would you like more info? say <more information> or <no>");
-                userInput = keyboard.nextLine();
-                if (!userInput.equalsIgnoreCase("no")) {
-                   System.out.println("From webMD:");
-                   System.out.println(qnAs.get(5).getAnswer());
-                }
-                }
-
-                else if (userInput.contains("symptom")) {
-                    System.out.println(qnAs.get(2).getQuestion());
-                    System.out.println(qnAs.get(2).getAnswer());
-                    System.out.println("Would you like more info? say <more information> or <no>");
-                    userInput = keyboard.nextLine();
-                    if (!userInput.equalsIgnoreCase("no")) {
-                        System.out.println("From webMD:");
-                        System.out.println(qnAs.get(7).getAnswer());
-                    }
-                }
-                else if (userInput.contains("who") | userInput.contains("Who")| userInput.contains("risk") | userInput.contains("Risk")) {
-                    System.out.println(qnAs.get(3).getAnswer());
-                    System.out.println("Would you like more info? say <more information> or <no>");
-                    userInput = keyboard.nextLine();
-                    if (!userInput.equalsIgnoreCase("no")) {
-                        System.out.println("From webMD:");
-                        System.out.println(qnAs.get(16).getAnswer());
-                    }
-                }
-                else if (userInput.contains("travel") ) {
-                    System.out.println(qnAs.get(4).getAnswer());
-                }
-                else if (userInput.contains("treat") | userInput.contains("cure") ) {
-                    System.out.println(qnAs.get(22).getAnswer());
-                    System.out.println(qnAs.get(23).getAnswer());
-                    System.out.println(qnAs.get(24).getAnswer());
-                    System.out.println(qnAs.get(25).getAnswer());
-                    System.out.println(qnAs.get(26).getAnswer());
-
-                }
-                else if (userInput.contains("diag") ) {
-                    System.out.println(qnAs.get(21).getAnswer());
-                }
-                else if (userInput.contains("mpli") ) {
-                    System.out.println(qnAs.get(20).getAnswer());
-                }
-                else if (userInput.contains("typ") ) {
-                    System.out.println(qnAs.get(19).getAnswer());
-                }
-                else if (userInput.contains("hi") | userInput.contains("hello")) {
-                    System.out.println("Hello! What questions do you  have about scabies?");
-                }
-                else {
-                    System.out.println("I can't help you with that yet. Try asking something different, or in a different way.\nPlease check that you havent misspelled your question.");
-                }
-
+        System.out.println("What disease are you looking for information about? (input Scabies)");
+        if (keyboard.nextLine().equalsIgnoreCase("scabies")) {
                 
-            userInput = keyboard.nextLine();
-        }
+            System.out.println("What questions do you have about scabies?\n Enter STOP to exit chat");
+            String userInput = keyboard.nextLine();
 
+            while (!userInput.equalsIgnoreCase("stop")) {
+                if(userInput.contains("What is scabies") | userInput.contains("what is scabies")) {
+                    System.out.println(qnAs.get(1).getAnswer());
+                    System.out.println("Would you like more info? say <more information> or <no>");
+                    userInput = keyboard.nextLine();
+                    if (!userInput.equalsIgnoreCase("no")) {
+                    System.out.println("From webMD:");
+                    System.out.println(qnAs.get(5).getAnswer());
+                    }
+                    }
+
+                    else if (userInput.contains("symptom")) {
+                        System.out.println(qnAs.get(2).getQuestion());
+                        System.out.println(qnAs.get(2).getAnswer());
+                        System.out.println("Would you like more info? say <more information> or <no>");
+                        userInput = keyboard.nextLine();
+                        if (!userInput.equalsIgnoreCase("no")) {
+                            System.out.println("From webMD:");
+                            System.out.println(qnAs.get(7).getAnswer());
+                        }
+                    }
+                    else if (userInput.contains("who") | userInput.contains("Who")| userInput.contains("risk") | userInput.contains("Risk")) {
+                        System.out.println(qnAs.get(3).getAnswer());
+                        System.out.println("Would you like more info? say <more information> or <no>");
+                        userInput = keyboard.nextLine();
+                        if (!userInput.equalsIgnoreCase("no")) {
+                            System.out.println("From webMD:");
+                            System.out.println(qnAs.get(16).getAnswer());
+                        }
+                    }
+                    else if (userInput.contains("travel") ) {
+                        System.out.println(qnAs.get(4).getAnswer());
+                    }
+                    else if (userInput.contains("treat") | userInput.contains("cure") ) {
+                        System.out.println(qnAs.get(22).getAnswer());
+                        System.out.println(qnAs.get(23).getAnswer());
+                        System.out.println(qnAs.get(24).getAnswer());
+                        System.out.println(qnAs.get(25).getAnswer());
+                        System.out.println(qnAs.get(26).getAnswer());
+
+                    }
+                    else if (userInput.contains("diag") ) {
+                        System.out.println(qnAs.get(21).getAnswer());
+                    }
+                    else if (userInput.contains("mpli") ) {
+                        System.out.println(qnAs.get(20).getAnswer());
+                    }
+                    else if (userInput.contains("typ") ) {
+                        System.out.println(qnAs.get(19).getAnswer());
+                    }
+                    else if (userInput.contains("hi") | userInput.contains("hello")) {
+                        System.out.println("Hello! What questions do you  have about scabies?");
+                    }
+                    else {
+                        System.out.println("I can't help you with that yet. Try asking something different, or in a different way.\nPlease check that you havent misspelled your question.");
+                    }
+
+                    
+                userInput = keyboard.nextLine();
+            }
+        } 
+        else {
+            System.out.println("I do not have any information about that. Try asking about scabies next times. \nEXITING PROGRAM");
+            System.exit(0);
+        }
        System.exit(0);
        keyboard.close();
    } 
