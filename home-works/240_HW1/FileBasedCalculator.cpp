@@ -63,7 +63,7 @@ int main() {
 	  ofstream fileOutput;
 	  fileOutput.open ("output.txt");
 	  fileOutput << "The result of " << operation << " on " << num1 << " and " << num2 << " is below \n" << final;
-	  fileOutput.close();
+
 
 	return 0;
 }

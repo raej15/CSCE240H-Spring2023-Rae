@@ -1,2 +1,2 @@
-The result of  on -138372624 and 1 is below 
--138372624
+The result of divide on 10 and 5 is below 
+2
