@@ -10,6 +10,9 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <regex> 
+#include<string.h>
+#include <iterator> 
 using namespace std;
 
 class BaseEmailHeaderType
@@ -62,20 +65,19 @@ int main()
 
 	S.name = " Gmail Header";
 
-	C.name = " Outlook Header";
+	C.name = "Outlook Header";
 
 
-	cout <<"Then name of shape S is:"<<S.getname() << endl;
+	std::cout <<"Then name of shape S is:"<<S.getname() << endl;
 
-	cout<<"\n\n*****************************" << endl;
+	std::cout<<"\n\n*****************************" << endl;
 
-	cout <<"\n\nThen name of shape C is:"<<C.getname() << endl;
+	std::cout <<"\n\nThen name of shape C is:"<<C.getname() << endl;
 
     std::ifstream myfile ("GmailHeader.txt");
-    std::string mystring;
     std::string final;
-
     std::string myline;
+
     if ( myfile.is_open() ) {
         while ( myfile ) {
             std::getline (myfile, myline);
@@ -84,7 +86,37 @@ int main()
         }
     }
     
-    cout<<"\n\n*****************************" << endl;
+    std::cout<<"\n\n*****************************" << endl;
 
     std::cout << final;
+   
+    //string to be searched
+    //string mystr = final; 
+   
+    // regex expression for pattern to be searched 
+    regex regexp("To: .*"); 
+   
+    // flag type for determining the matching behavior (in this case on string objects)
+     smatch m; 
+   
+    // regex_search that searches pattern regexp in the string mystr  
+    regex_search(final, m, regexp); 
+  
+    cout<<"String that matches the pattern:"<<endl;
+    string selectedFinal;
+
+    for (auto x : m) 
+        selectedFinal.append(x);;
+
+    std::cout << selectedFinal;
+
+    string shortFinal;
+
+    regex regexp1("To: "); 
+
+    regex_replace(back_inserter(shortFinal), selectedFinal.begin(), selectedFinal.end(), regexp1,  ""); 
+
+    std::cout << "\n" << shortFinal;
+
+    return 0; 
 }
