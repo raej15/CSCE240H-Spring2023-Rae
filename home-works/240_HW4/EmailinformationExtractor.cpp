@@ -17,106 +17,185 @@ using namespace std;
 
 class BaseEmailHeaderType
 {
-public:
-	string name;
-	int angles;
-
-	string getname()
-	{
-		return name;
-	}
-
-	int getangles()
-	{
-		return angles;
-	}
-
-	virtual float getarea() = 0;  // Pure Virtual Function
+private:
+    //string to;
+    //string from;
 
 };
 
 class GmailHeaderType: public BaseEmailHeaderType
 {
+private:
+    string to;
+    string from;
 public:
-	int length, width;
 
-	float getarea()
-	{
-	return length * width;
-	}
+    GmailHeaderType(string header) {
+        string shortHeader;
+        smatch m; 
+        string selectedHeader;
+        
+        //To functionality
+        regex regexp("To: .*"); 
+        
+        regex_search(header, m, regexp); 
+    
+        for (auto x : m) 
+            selectedHeader.append(x);;
+
+        regex regexp1("To: ");
+
+        regex_replace(back_inserter(shortHeader), selectedHeader.begin(), selectedHeader.end(), regexp1,  ""); 
+
+        to = shortHeader;
+
+        //From functionality
+        regex regexp3("From: .*"); 
+        
+        regex_search(header, m, regexp3); 
+    
+        shortHeader = "";
+        selectedHeader = "";
+        for (auto x : m) 
+            selectedHeader.append(x);;
+
+        regex regexp4("From: ");
+
+        regex_replace(back_inserter(shortHeader), selectedHeader.begin(), selectedHeader.end(), regexp4,  ""); 
+
+        from = shortHeader;
+
+    }
+    
+
+
+    string getPart(string part) {
+
+       if(part == "To") {
+            return to;
+       }
+       else if (part == "From") {
+        return from;
+       }
+       else {
+        return "undefined";
+       }
+
+    }
+    
 };
 
 class OutlookHeaderType: public BaseEmailHeaderType
 {
 public:
-	int radius;
+    string to;
+    string from;
 
-	float getarea()
-	{
-		return 3.14 * radius * radius;
-	}
+	OutlookHeaderType(string header) {
+        string shortHeader;
+        smatch m; 
+        string selectedHeader;
+        
+        //To functionality
+        regex regexp7("To: .*"); 
+        
+        regex_search(header, m, regexp7); 
+    
+        for (auto x : m) 
+            selectedHeader.append(x);;
+
+        regex regexp8("To: ");
+
+        regex_replace(back_inserter(shortHeader), selectedHeader.begin(), selectedHeader.end(), regexp8,  ""); 
+
+        to= shortHeader;
+
+        //From functionality
+        regex regexp3("From: .*"); 
+        
+        regex_search(header, m, regexp8); 
+    
+        shortHeader = "";
+        selectedHeader = "";
+        for (auto x : m) 
+            selectedHeader.append(x);;
+
+        regex regexp4("From: ");
+
+        regex_replace(back_inserter(shortHeader), selectedHeader.begin(), selectedHeader.end(), regexp4,  ""); 
+
+        from = shortHeader;
+    }
+
+    string getPartO(string part) {
+        cout << "outlook working\n";
+
+       if(part == "To") {
+            return to;
+       }
+       else if (part == "From") {
+        return from;
+       }
+       else {
+        return "undefined";
+       }
+
+    }
+    
 
 };
 
 int main()
 {
-	GmailHeaderType S;
-	OutlookHeaderType C;
+    std::string gFinal;
+    std::string oFinal;
 
-	S.name = " Gmail Header";
-
-	C.name = "Outlook Header";
-
-
-	std::cout <<"Then name of shape S is:"<<S.getname() << endl;
-
-	std::cout<<"\n\n*****************************" << endl;
-
-	std::cout <<"\n\nThen name of shape C is:"<<C.getname() << endl;
-
-    std::ifstream myfile ("GmailHeader.txt");
-    std::string final;
+   
+   /*std::ifstream myfile ("GmailHeader.txt");
     std::string myline;
 
     if ( myfile.is_open() ) {
         while ( myfile ) {
             std::getline (myfile, myline);
             //std::cout << myline <<'\n';
-            final.append(myline + "\n");
+            gFinal.append(myline + "\n");
+        }
+    }
+    */
+    
+    std::ifstream myfile2 ("OutlookHeader.txt");
+    std::string myline2;
+
+    if ( myfile2.is_open() ) {
+        while ( myfile2 ) {
+            std::getline (myfile2, myline2);
+            //std::cout << myline <<'\n';
+            oFinal.append(myline2 + "\n");
         }
     }
     
     std::cout<<"\n\n*****************************" << endl;
 
-    std::cout << final;
-   
-    //string to be searched
-    //string mystr = final; 
-   
-    // regex expression for pattern to be searched 
-    regex regexp("To: .*"); 
-   
-    // flag type for determining the matching behavior (in this case on string objects)
-     smatch m; 
-   
-    // regex_search that searches pattern regexp in the string mystr  
-    regex_search(final, m, regexp); 
-  
-    cout<<"String that matches the pattern:"<<endl;
-    string selectedFinal;
+    std::cout << gFinal;
 
-    for (auto x : m) 
-        selectedFinal.append(x);;
+    std::cout << oFinal;
 
-    std::cout << selectedFinal;
 
-    string shortFinal;
 
-    regex regexp1("To: "); 
 
-    regex_replace(back_inserter(shortFinal), selectedFinal.begin(), selectedFinal.end(), regexp1,  ""); 
+    GmailHeaderType gHeader = GmailHeaderType(gFinal);
+    OutlookHeaderType oHeader = OutlookHeaderType(oFinal);
 
-    std::cout << "\n" << shortFinal;
+
+    std::cout<<"\n\n*****************************" << endl;
+
+    //std::cout << "\nfrom";
+    //std::cout << "\n" << gHeader.getPart("From");
+
+    //std::cout << "\nTo";
+    std::cout << "\n" << gHeader.getPart("From");
+
+    //std::cout << "\n" << oHeader.getPartO("To");
 
     return 0; 
 }
