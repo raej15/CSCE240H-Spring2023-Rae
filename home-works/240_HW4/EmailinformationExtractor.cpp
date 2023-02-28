@@ -150,8 +150,8 @@ int main()
     std::string gFinal;
     std::string oFinal;
 
-   
-   /*std::ifstream myfile ("GmailHeader.txt");
+   //opening outlook header
+   std::ifstream myfile ("GmailHeader.txt");
     std::string myline;
 
     if ( myfile.is_open() ) {
@@ -161,7 +161,7 @@ int main()
             gFinal.append(myline + "\n");
         }
     }
-    */
+    
     
     std::ifstream myfile2 ("OutlookHeader.txt");
     std::string myline2;
@@ -178,22 +178,19 @@ int main()
 
     std::cout << gFinal;
 
-    std::cout << oFinal;
-
-
-
+    //std::cout << oFinal;
 
     GmailHeaderType gHeader = GmailHeaderType(gFinal);
     OutlookHeaderType oHeader = OutlookHeaderType(oFinal);
 
 
-    std::cout<<"\n\n*****************************" << endl;
+    std::cout<<"\n\n*****************************\n\nYour part output for To:" << endl;
 
-    //std::cout << "\nfrom";
-    //std::cout << "\n" << gHeader.getPart("From");
+    std::cout << gHeader.getPart("To") << "\n";
 
-    //std::cout << "\nTo";
+    std::cout << "\nYour part output for From:";
     std::cout << "\n" << gHeader.getPart("From");
+    
 
     //std::cout << "\n" << oHeader.getPartO("To");
 
