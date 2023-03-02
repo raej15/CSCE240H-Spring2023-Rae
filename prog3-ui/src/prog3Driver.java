@@ -9,6 +9,7 @@ import java.util.ArrayList;
 /**
  * takes input files and answers questions based on them
  * Credit: https://www.w3schools.com/java/java_regex.asp for help with pattern matching
+ * Credit: Used a significant amount of my code from prog2-processor
  * @author Rae Jones
  */
 public class prog3Driver {
@@ -25,7 +26,7 @@ public class prog3Driver {
 
         try {
 
-            File cdcData = new File("./prog2-processor/data/cdcOutput.txt");
+            File cdcData = new File("./prog3-ui/data/cdcOutput.txt");
             Scanner fileReader = new Scanner(cdcData);
             
 
@@ -58,7 +59,7 @@ public class prog3Driver {
 
         try {
 
-            File webMDData = new File("./prog2-processor/data/webMDOutput.txt");
+            File webMDData = new File("./prog3-ui/data/webMDOutput.txt");
             Scanner fileReader = new Scanner(webMDData);
             
 
@@ -96,17 +97,7 @@ public class prog3Driver {
             while (!userInput.equalsIgnoreCase("q") & !userInput.equalsIgnoreCase("quit")) {
                 System.out.print("\nChatbot:\n");
 
-                if(userInput.contains("What is scabies") | userInput.contains("what is scabies")) {
-                    System.out.println(qnAs.get(1).getAnswer());
-                    System.out.println("Would you like more info? say <more information> or <no>");
-                    userInput = keyboard.nextLine();
-                    if (!userInput.equalsIgnoreCase("no")) {
-                    System.out.println("\nChatbot:\nFrom webMD:");
-                    System.out.println(qnAs.get(5).getAnswer());
-                    }
-                    }
-
-                    else if (userInput.contains("symptom")) {
+                    if (userInput.contains("symptom")) {
                         System.out.println(qnAs.get(2).getQuestion());
                         System.out.println(qnAs.get(2).getAnswer());
                         System.out.println("Would you like more info? say <more information> or <no>");
@@ -145,11 +136,32 @@ public class prog3Driver {
                     else if (userInput.contains("typ") ) {
                         System.out.println(qnAs.get(19).getAnswer());
                     }
-                    else if (userInput.contains("hi") | userInput.contains("hello")) {
+                    else if (userInput.contains("every") ) {
+                        for(int i = 0; i < qnAs.size()-7; i++) {
+                            System.out.println(qnAs.get(i).getQuestion());
+                            System.out.println(qnAs.get(i).getAnswer());
+                        }
+                    }
+                    else if (userInput.contains("cab") | userInput.contains("isease") | userInput.contains("it") ) {
+                        System.out.println(qnAs.get(1).getAnswer());
+                        System.out.println("Would you like more info? say <more information> or <no>");
+                        userInput = keyboard.nextLine();
+                        if (!userInput.equalsIgnoreCase("no")) {
+                            System.out.println("\nChatbot:\nFrom webMD:");
+                            System.out.println(qnAs.get(5).getAnswer());
+                        }
+                    }
+                    else if (userInput.contains("accin") ) {
+                        System.out.println(qnAs.get(4).getAnswer());
+                    }
+                    else if (userInput.contains("eather")) {
+                        System.out.println("The weather is ok. What questions do you  have about scabies?");
+                    }
+                    else if (userInput.contains("hi") | userInput.contains("ello")) {
                         System.out.println("Hello! What questions do you  have about scabies?");
                     }
                     else {
-                        System.out.println("I can't help you with that yet. Try asking something different, or in a different way.\nPlease check that you havent misspelled your question.");
+                        System.out.println("I do not know this information. Try asking something different, or in a different way.\nPlease check that you havent misspelled your question.");
                     }
 
                 System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
@@ -158,7 +170,7 @@ public class prog3Driver {
             }
         } 
         else {
-            System.out.println("I do not have any information about that. Try asking about scabies next times. \nEXITING PROGRAM");
+            System.out.println("I do not know this information. Try asking about scabies next time. \nEXITING PROGRAM");
             System.exit(0);
         }
         
