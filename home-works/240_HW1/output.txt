@@ -1,2 +1,2 @@
-The result of divide on 10 and 5 is below 
+The result of divide on 12 and 6 is below 
 2

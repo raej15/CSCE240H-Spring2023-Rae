@@ -142,6 +142,10 @@ public class prog3Driver {
                             System.out.println(qnAs.get(i).getAnswer());
                         }
                     }
+                    else if (userInput.contains("accin") ) {
+                        System.out.println(qnAs.get(4).getAnswer());
+                    }
+                    
                     else if (userInput.contains("cab") | userInput.contains("isease") | userInput.contains("it") ) {
                         System.out.println(qnAs.get(1).getAnswer());
                         System.out.println("Would you like more info? say <more information> or <no>");
@@ -151,9 +155,7 @@ public class prog3Driver {
                             System.out.println(qnAs.get(5).getAnswer());
                         }
                     }
-                    else if (userInput.contains("accin") ) {
-                        System.out.println(qnAs.get(4).getAnswer());
-                    }
+                    
                     else if (userInput.contains("eather")) {
                         System.out.println("The weather is ok. What questions do you  have about scabies?");
                     }
