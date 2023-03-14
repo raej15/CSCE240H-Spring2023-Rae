@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "gabe",
+      "request": "launch",
+      "mainClass": "gabe",
+      "projectName": "CSCE240H-Spring2023-Rae_680ac858"
+    },
+    {
+      "type": "java",
       "name": "prog3Driver",
       "request": "launch",
       "mainClass": "prog3Driver",
