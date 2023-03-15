@@ -56,7 +56,7 @@ int main() {
 		system("clear");
 
 		if (choice == 1){
-			cout << "Enter a positive whole number less than 12" << endl;
+			cout << "Enter a positive whole number less than 10" << endl;
 			cin >> num;
 			if(0>= num |  num >= 10) {
 				cout << "Invalid Reponse\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
@@ -67,7 +67,7 @@ int main() {
 			cout << "- - - - - - - - - - - - - - - - - - - - - - - - - \nYour number: " << num << "\nYour factorial: " << numF << endl;
 		}
 		else {
-			cout << "Enter 2 positive whole numbers less than 12, separated by a space\n the first number must be bigger than the second" << endl;
+			cout << "Enter 2 positive whole numbers less than 10, separated by a space\n the first number must be bigger than the second" << endl;
 			cin >> num >> r;
 			if(0>= num |  num >= 10) {
 				cout << "Invalid Reponse\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
