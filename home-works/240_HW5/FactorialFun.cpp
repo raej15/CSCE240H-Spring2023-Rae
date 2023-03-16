@@ -87,15 +87,9 @@ int main() {
 
 		}
 
-		//cout << num <<endl;
-		//cout << r <<endl;
-
-	    // Get ending timepoint
 	    auto stop = high_resolution_clock::now();
 
-	    // Get duration. Substart timepoints to
-	    // get duration. To cast it to proper unit
-	    // use duration cast method
+
 	    auto duration = duration_cast<microseconds>(stop - start);
 
 	    cout << "\nProcessing Time: " << duration.count() << " microseconds" << "\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
