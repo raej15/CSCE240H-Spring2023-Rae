@@ -88,6 +88,8 @@ public class prog3Driver {
             System.out.println("no file");
             e.printStackTrace();
         }
+
+        
         System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What disease are you looking for information about? (input Scabies)");
         if (keyboard.nextLine().equalsIgnoreCase("scabies")) {
                 

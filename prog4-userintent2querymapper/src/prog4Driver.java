@@ -14,81 +14,13 @@ import java.util.ArrayList;
  */
 public class prog4Driver {
    public static void main(String[] args) {
+
         Scanner keyboard = new Scanner(System.in);
-        String currLine;
-        Pattern pattern = Pattern.compile("^[A-Z]", Pattern.CASE_INSENSITIVE);
-        Matcher matcher;
-        boolean matchFound;
-        int currIndex = -1;
         ArrayList<QnA> qnAs = new ArrayList<QnA>();
-        QnA currQnA;
-        QnA wcurrQnA;
+        qnAs.addAll(DataLoader.loadCDC());
+        qnAs.addAll(DataLoader.loadWebMD());
 
-        try {
-
-            File cdcData = new File("./prog3-ui/data/cdcOutput.txt");
-            Scanner fileReader = new Scanner(cdcData);
-            
-
-            while (fileReader.hasNextLine()) {
-                currLine = fileReader.nextLine();
-                matcher = pattern.matcher(currLine);     
-                matchFound = matcher.find();
-                wcurrQnA = new QnA();
-
-                if(matchFound) {
-                    qnAs.add(wcurrQnA);
-                    currIndex++;
-
-                    qnAs.get(currIndex).setQuestion(currLine.trim());
-                } else {
-                    qnAs.get(currIndex).addToAnswer(currLine.trim());
-                }
-            
-            }
-
-            fileReader.close();
-        }
-
-        catch (FileNotFoundException e) {
-            System.out.println("no file");
-            e.printStackTrace();
-        }
-
-        currIndex = 3;
-
-        try {
-
-            File webMDData = new File("./prog3-ui/data/webMDOutput.txt");
-            Scanner fileReader = new Scanner(webMDData);
-            
-
-            while (fileReader.hasNextLine()) {
-                currLine = fileReader.nextLine();
-                matcher = pattern.matcher(currLine);     
-                matchFound = matcher.find();
-                
-                currQnA = new QnA();
-
-                if(matchFound) {
-                    qnAs.add(currQnA);
-                    currIndex++;
-
-                    qnAs.get(currIndex).setQuestion(currLine.trim());
-                } else {
-                    qnAs.get(currIndex).addToAnswer(currLine.trim());
-                }
-            
-            }
-        
-            fileReader.close();
-        }
-
-        catch (FileNotFoundException e) {
-            System.out.println("no file");
-            e.printStackTrace();
-        }
-        System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What disease are you looking for information about? (input Scabies)");
+        System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What disease are you looking for information about? (input Scabies)\n");
         if (keyboard.nextLine().equalsIgnoreCase("scabies")) {
                 
             System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What questions do you have about scabies?\nEnter (q)uit to exit chat");

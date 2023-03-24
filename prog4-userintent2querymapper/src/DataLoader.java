@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class DataLoader {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ArrayList<QnA> qnAs = new ArrayList<QnA>();
         qnAs.addAll(loadCDC());
         qnAs.addAll(loadWebMD());
@@ -16,9 +16,11 @@ public class DataLoader {
             System.out.print(qnAs.get(i).getQuestion()+"\n");
             System.out.print(qnAs.get(i).getAnswer()+"\n");
         } 
+        
 
 
     }
+    */
 
     static int currIndex = -1;
     static String currLine;
@@ -27,7 +29,7 @@ public class DataLoader {
     static boolean matchFound;
 
     public static ArrayList<QnA> loadCDC() {
-        Scanner keyboard = new Scanner(System.in);
+        //Scanner keyboard = new Scanner(System.in);
         //String currLine;
         //Pattern pattern = Pattern.compile("^[A-Z]", Pattern.CASE_INSENSITIVE);
        // Matcher matcher;
@@ -66,7 +68,7 @@ public class DataLoader {
             e.printStackTrace();
         }
 
-        keyboard.close();
+        //keyboard.close();
         //currIndex = 3;
         return cQnAs;
     }
