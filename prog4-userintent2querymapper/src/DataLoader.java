@@ -39,7 +39,7 @@ public class DataLoader {
 
         try {
 
-            File cdcData = new File("./prog2-processor/data/cdcOutput.txt");
+            File cdcData = new File("./prog4-userintent2querymapper/data/cdcOutput.txt");
             Scanner fileReader = new Scanner(cdcData);
             
 
@@ -53,7 +53,7 @@ public class DataLoader {
                     cQnAs.add(wcurrQnA);
                     currIndex++;
 
-                    cQnAs.get(currIndex).setQuestion(currLine.trim());
+                    cQnAs.get(currIndex).setQuestion(currLine.trim(), "\n^ Source: CDC\n---------------\n");
                 } else {
                     cQnAs.get(currIndex).addToAnswer(currLine.trim());
                 }
@@ -80,7 +80,7 @@ public class DataLoader {
 
         try {
 
-            File webMDData = new File("./prog3-ui/data/webMDOutput.txt");
+            File webMDData = new File("./prog4-userintent2querymapper/data/webMDOutput.txt");
             Scanner fileReader = new Scanner(webMDData);
             
 
@@ -95,7 +95,7 @@ public class DataLoader {
                     wQnAs.add(currQnA);
                     currIndex++;
 
-                    wQnAs.get(currIndex).setQuestion(currLine.trim());
+                    wQnAs.get(currIndex).setQuestion(currLine.trim(), "\n^ Source: WebMD\n---------------\n");
                 } else {
                     wQnAs.get(currIndex).addToAnswer(currLine.trim());
                 }

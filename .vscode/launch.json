@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Response",
+      "request": "launch",
+      "mainClass": "Response",
+      "projectName": "CSCE240H-Spring2023-Rae_680ac858"
+    },
+    {
+      "type": "java",
       "name": "prog4Driver",
       "request": "launch",
       "mainClass": "prog4Driver",
