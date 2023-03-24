@@ -7,21 +7,23 @@ import java.util.ArrayList;
 
 public class DataLoader {
 
-    /*public static void main(String[] args) {
+    /*
+    public static void main(String[] args) {
         ArrayList<QnA> qnAs = new ArrayList<QnA>();
         qnAs.addAll(loadCDC());
         qnAs.addAll(loadWebMD());
 
         for(int i = 0; i < qnAs.size(); i++) {   
-            System.out.print(qnAs.get(i).getQuestion()+"\n");
-            System.out.print(qnAs.get(i).getAnswer()+"\n");
+            System.out.print("\nQUESTION:\n"+ qnAs.get(i).getQuestion()+"\n");
+            System.out.print("\nANSWER:\n"+ qnAs.get(i).getAnswer()+"\n");
         } 
-        
-
 
     }
-    */
 
+     */
+    
+
+    static boolean lastQuestion;
     static int currIndex = -1;
     static String currLine;
     static Pattern pattern = Pattern.compile("^[A-Z]", Pattern.CASE_INSENSITIVE);
@@ -49,15 +51,16 @@ public class DataLoader {
                 matchFound = matcher.find();
                 wcurrQnA = new QnA();
 
-                if(matchFound) {
-                    cQnAs.add(wcurrQnA);
-                    currIndex++;
+                if (!(currLine.contains("in original file"))) {
+                    if(matchFound) {
+                        cQnAs.add(wcurrQnA);
+                        currIndex++;
 
-                    cQnAs.get(currIndex).setQuestion(currLine.trim(), "\n^ Source: CDC\n---------------\n");
-                } else {
-                    cQnAs.get(currIndex).addToAnswer(currLine.trim());
+                        cQnAs.get(currIndex).setQuestion(currLine.trim(), "\n^ Source: CDC\n---------------\n");
+                    } else {
+                        cQnAs.get(currIndex).addToAnswer(currLine.trim());
+                    }
                 }
-            
             }
 
             fileReader.close();
@@ -91,15 +94,18 @@ public class DataLoader {
                 
                 currQnA = new QnA();
 
-                if(matchFound) {
-                    wQnAs.add(currQnA);
-                    currIndex++;
+                if (!(currLine.contains("in original file"))) {
+                    if(matchFound&& !(lastQuestion)) {
+                        lastQuestion = true;
+                        wQnAs.add(currQnA);
+                        currIndex++;
 
-                    wQnAs.get(currIndex).setQuestion(currLine.trim(), "\n^ Source: WebMD\n---------------\n");
-                } else {
-                    wQnAs.get(currIndex).addToAnswer(currLine.trim());
+                        wQnAs.get(currIndex).setQuestion(currLine.trim(), "\n^ Source: WebMD\n---------------\n");
+                    } else {
+                        lastQuestion = false;
+                        wQnAs.get(currIndex).addToAnswer(currLine.trim());
+                    }
                 }
-            
             }
         
             fileReader.close();

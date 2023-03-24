@@ -23,7 +23,7 @@ public class prog1 {
                 Scanner fileReader = new Scanner(cdcData);
                 PrintWriter cdcOutput = new PrintWriter("./prog1-extractor/test/cdcOutput.txt");
 
-                cdcOutput.println("The CDC Reports:\n");
+                //cdcOutput.println("The CDC Reports:\n");
 
                 while (fileReader.hasNextLine()) {
                 
@@ -76,7 +76,7 @@ public class prog1 {
                 Scanner fileReader = new Scanner(webMDData);
                 PrintWriter webMDOutput = new PrintWriter("./prog1-extractor/test/webMDOutput.txt");
 
-                webMDOutput.println("WebMD Reports:\n");
+                //webMDOutput.println("WebMD Reports:\n");
 
                 while (fileReader.hasNextLine()) {
                 

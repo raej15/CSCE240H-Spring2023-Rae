@@ -1,9 +1,7 @@
-WebMD Reports:
-
 What Is Scabies?
 	Scabies is not an infection, but an infestation. Tiny mites called Sarcoptes scabiei set up shop in the outer layers of human skin. The skin does not take kindly to the invasion. As the mites burrow and lay eggs inside the skin, the infestation leads to relentless itching and an angry rash.
 Scabies Symptoms:
-	When a person is infested with scabies for the first time, it can take four to six weeks for the skin to react. The most common symptoms are:
+When a person is infested with scabies for the first time, it can take four to six weeks for the skin to react. The most common symptoms are:
 	Intense itching, especially at night
 	A pimple-like rash
 	Scales or blisters
@@ -13,7 +11,7 @@ Scabies or Something Else?
 Scabies Burrows:
 	Another hallmark of scabies is the appearance of track-like burrows in the skin. These raised lines are usually grayish-white or skin-colored. They are created when female mites tunnel just under the surface of the skin. After creating a burrow, each female lays 10 to 25 eggs inside.
 Where Do Scabies Mites Live?
-	Scabies mites can live anywhere on the body, but some of their favorite spots include:
+Scabies mites can live anywhere on the body, but some of their favorite spots include:
 	Between the fingers
 	The folds of the wrist, elbow, or knee
 	Around the waistline and navel
@@ -26,7 +24,7 @@ How Does Scabies Spread?
 Can You Get Scabies from a Pet?
 	Dogs and cats get scabies, too -- better known as mange. However, canine scabies and feline scabies are not caused by the same type of mite that triggers human scabies. You can get mites from handling an infested pet, but these mites can’t reproduce in human skin. This means they usually die off without causing serious symptoms.
 Who Gets Scabies?
-	Anyone can get scabies, but those at higher risk include:
+Anyone can get scabies, but those at higher risk include:
 	Sexually active adults
 	Prison inmates
 	People in institutional care

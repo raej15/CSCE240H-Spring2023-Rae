@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "prog1",
+      "request": "launch",
+      "mainClass": "prog1",
+      "projectName": "CSCE240H-Spring2023-Rae_680ac858"
+    },
+    {
+      "type": "java",
       "name": "Response",
       "request": "launch",
       "mainClass": "Response",
