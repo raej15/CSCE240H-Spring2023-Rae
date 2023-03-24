@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "DataLoader",
+      "request": "launch",
+      "mainClass": "DataLoader",
+      "projectName": "CSCE240H-Spring2023-Rae_680ac858"
+    },
+    {
+      "type": "java",
       "name": "gabe",
       "request": "launch",
       "mainClass": "gabe",
