@@ -121,6 +121,10 @@ public class Response {
         return "\nChatbot:\n" + answer;
     }
 
+    public static String lastChanceHandle() {
+        return "yas";
+    }
+
     /* 
     public static void printResponse(String query) {
         String answer = handleQuerys(query);
