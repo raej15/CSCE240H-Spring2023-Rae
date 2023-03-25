@@ -10,8 +10,14 @@ public class Response {
     
     public static void main(String[] args) {
        //System.out.println(handleQuerys(" poop"));
-       String userInput = "what is the disease Scabies";
-       System.out.println(queryConfidence(userInput));
+        ArrayList<QnA> qnAs = new ArrayList<QnA>();
+        qnAs.addAll(DataLoader.loadCDC());
+        qnAs.addAll(DataLoader.loadWebMD());
+
+       String userInput = "who can get it";
+       System.out.println(chosenQuery(userInput));
+       System.out.println(handleQuerys(userInput, qnAs));
+
 
 
     }
@@ -34,25 +40,47 @@ public class Response {
     }
 
     */
-    public static String[][] knownQueries = {{"What is Scabies", "Who is at Risk", "What can travelers do to prevent scabies", "Types of Scabies", "Symptoms", "When to call a Doctor", "Scabies Diagnosis", "Scabies Treatment", "Scabies Complications", "Tell me everything"},{"What is", "Who", "travel"}};
+    //public static String[][] knownQueries = {{"What is Scabies", "Who is at Risk", "What can travelers do to prevent scabies", "Types of Scabies", "Symptoms", "When to call a Doctor", "Scabies Diagnosis", "Scabies Treatment", "Scabies Complications", "Tell me everything"},{"What is", "Who", "travel"}};
 
 
-    public static String chosenQuery(String userInput, ArrayList<QnA> qnAs) {
+    public static String chosenQuery(String userInput) {
+        String[][] knownQueries = {{"What is Scabies", "Who is at Risk", "What can travelers do to prevent scabies", "Types of Scabies", "Symptoms", "When to call a Doctor", "Scabies Diagnosis", "Scabies Treatment", "Scabies Complications", "Tell me everything"},{"What is", "Who", "travel"}};
         //int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-        String closestQuery;
-        int matchNum;
+        String closestQuery = knownQueries[0][0];
+        int highMatchNum = 0;
         //String[] uSplit = userInput.split("\\s");
         String[] qSplit;
 
+        for (int row = 0; row < knownQueries.length; row++) {
+            for (int col = 0; col < knownQueries[row].length; col++) {
+                 //board[row][col] = row * col; 
+                //System.out.println(queryConfidence(userInput, knownQueries[0][col]));
+
+                if(highMatchNum < queryConfidence(userInput, knownQueries[0][col])) {
+                    highMatchNum = queryConfidence(userInput, knownQueries[0][col]);
+                    closestQuery = knownQueries[1][col];
+                }
+            } 
+        }
+
+        System.out.println(closestQuery);
+
+        //for (int i=0; i < 10; i++) {
+         //   System.out.println(queryConfidence(userInput, knownQueries[i][0]));
+        //}
+        return closestQuery;
+
     }
 
-    public static int queryConfidence(String userInput) {
+    public static int queryConfidence(String userInput, String knownQuery) {
         String[] uSplit = userInput.split("\\s");
         int totalMatches = 0;
+        long percentMatch;
          for ( int i = 0; i < uSplit.length; i++) {
-             totalMatches= totalMatches + queryMatch(uSplit[i], "What is Scabies");
+             totalMatches= totalMatches + queryMatch(uSplit[i], knownQuery);
  
          }
+         //percentMatch = totalMatches/uSplit.length;
          return totalMatches;
     }
 
@@ -66,7 +94,8 @@ public class Response {
     }
 
 
-    public static String handleQuerys(String query, ArrayList<QnA> qnAs) {
+    public static String handleQuerys(/*String query, */ String userInput, ArrayList<QnA> qnAs) {
+        String query = chosenQuery(userInput);
         String answer = ""; 
 
         for(int i = 0; i < qnAs.size(); i++) {
