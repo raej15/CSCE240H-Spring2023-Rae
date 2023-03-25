@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
  */
 public class Response {
     
+    /*
     public static void main(String[] args) {
        //System.out.println(handleQuerys(" poop"));
         ArrayList<QnA> qnAs = new ArrayList<QnA>();
@@ -21,7 +22,7 @@ public class Response {
 
 
     }
-    
+    */
     
     //static ArrayList<QnA> qnAs = new ArrayList<QnA>();
 
@@ -63,7 +64,7 @@ public class Response {
             } 
         }
 
-        System.out.println(closestQuery);
+        //System.out.println(closestQuery);
 
         //for (int i=0; i < 10; i++) {
          //   System.out.println(queryConfidence(userInput, knownQueries[i][0]));
