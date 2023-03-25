@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 /**
  * 
  * Credit: https://stackoverflow.com/questions/7929495/java-finding-the-number-of-word-matches-in-a-given-string for pattern matching in confidence estimation
@@ -45,7 +46,7 @@ public class Response {
 
 
     public static String chosenQuery(String userInput) {
-        String[][] knownQueries = {{"What is Scabies", "Who is at Risk", "What can travelers do to prevent scabies", "Types of Scabies", "Symptoms", "When to call a Doctor", "Scabies Diagnosis", "Scabies Treatment", "Scabies Complications", "Tell me everything"},{"What is", "Who", "travel"}};
+        String[][] knownQueries = {{"What is Scabies", "Who is at Risk", "What can travelers do to prevent scabies", "Types of Scabies", "Symptoms", /*"When to call a Doctor",*/ "Scabies Diagnosis", "Scabies Treatment", "Scabies Complications", "Tell me everything"},{"What is", "Who", "travel", "Crusted", "ymptoms", "Diagnosing", "Treating", "Complications", "everything"}};
         //int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
         String closestQuery = knownQueries[0][0];
         int highMatchNum = 0;
@@ -57,7 +58,7 @@ public class Response {
                  //board[row][col] = row * col; 
                 //System.out.println(queryConfidence(userInput, knownQueries[0][col]));
 
-                if(highMatchNum < queryConfidence(userInput, knownQueries[0][col])) {
+                if (highMatchNum < queryConfidence(userInput, knownQueries[0][col])) {
                     highMatchNum = queryConfidence(userInput, knownQueries[0][col]);
                     closestQuery = knownQueries[1][col];
                 }
