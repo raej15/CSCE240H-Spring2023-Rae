@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
- * takes input files and answers questions based on them
+ * takes input from user and answers questions based on it
  * @author Rae Jones
  */
 public class prog4Driver {
@@ -21,12 +21,17 @@ public class prog4Driver {
 
             while (!userInput.equalsIgnoreCase("q") & !userInput.equalsIgnoreCase("quit")) {
                 
-               if (Response.tellMore(userInput, qnAs, true).equals("no") | Response.tellMore(userInput, qnAs, true).contains("I do not know")) {
+               if (Response.tellMore(userInput, qnAs, true).equals("no")) {
                     System.out.println("\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
                     System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
                     userInput = keyboard.nextLine();
                }
-
+               else if (Response.tellMore(userInput, qnAs, true).contains("ONLY")) {
+                String response = Response.tellMore(userInput, qnAs, false);
+                System.out.println("\nChatbot:\n" + response.substring(4, response.length()));
+                System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
+                userInput = keyboard.nextLine();
+                }
                else {
                 System.out.println("\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
                 System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: Would you like more information?");

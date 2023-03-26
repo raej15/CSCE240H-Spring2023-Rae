@@ -1,4 +1,3 @@
-
 - - - - - - - - - - - - - - - - - - - - - -
 
 Chatbot: What disease are you looking for information about? (input Scabies)
@@ -9,218 +8,7 @@ scabies
 
 Chatbot: What questions do you have about scabies?
 Enter (q)uit to exit chat
-what is scabies
-
-Chatbot:
-
-Scabies is a skin condition in people caused by the human itch mite. The mite burrows into the upper layer of skin to live and lay eggs.
-
-^ Source: CDC
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: Would you like more information?
-yes
-
-Chatbot:
-
-Scabies is not an infection, but an infestation. Tiny mites called Sarcoptes scabiei set up shop in the outer layers of human skin. The skin does not take kindly to the invasion. As the mites burrow and lay eggs inside the skin, the infestation leads to relentless itching and an angry rash.
-
-^ Source: WebMD
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-whos at risk for it
-
-Chatbot:
-
-Scabies is found worldwide and can spread rapidly under crowded conditions where close skin-to-skin contact is frequent. Child-care facilities, nursing homes, extended-care facilities, and prisons are often sites of scabies outbreaks. Scabies is more common in long-term travelers than in those who travel for less than 8 weeks at a time.
-Animals do not have scabies and cannot spread scabies to people.
-
-^ Source: CDC
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: Would you like more information?
-yes
-
-Chatbot:
-
-Anyone can get scabies, but those at higher risk include:
-Sexually active adults
-Prison inmates
-People in institutional care
-People living in crowded conditions
-People in child care facilities
-
-^ Source: WebMD
----------------
-
-When someone is diagnosed with scabies, anyone who has close physical contact with the person should also be treated. Close contact includes bathing together, sleeping in the same bed, or even holding hands. Doctors usually recommend treating all members of the household, even if symptoms are not present. (Remember, it can take four to six weeks for symptoms to appear.)
-
-^ Source: WebMD
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-does travel put you at risk
-
-Chatbot:
-
-There is no vaccine or medicine to prevent scabies. Effective medicine to treat scabies is only available with a doctor's prescription.
-Travelers can avoid scabies by not touching or having close skin-to-skin contact with a person who has a rash or who is itching. Avoid touching or handling a sick person’s clothing or bedding.
-Scabies mites die when you wash bedding and clothing using hot water and hot dryer cycles or dry-clean the items. Items that cannot be dry-cleaned or laundered can be disinfested by storing them in a closed plastic bag for more than 72 hours. Scabies mites generally do not survive more than 2 to 3 days away from human skin.
-
-
-^ Source: CDC
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-who is most at risk
-
-Chatbot:
-
-Scabies is found worldwide and can spread rapidly under crowded conditions where close skin-to-skin contact is frequent. Child-care facilities, nursing homes, extended-care facilities, and prisons are often sites of scabies outbreaks. Scabies is more common in long-term travelers than in those who travel for less than 8 weeks at a time.
-Animals do not have scabies and cannot spread scabies to people.
-
-^ Source: CDC
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-is there more than one type of scabies
-
-Chatbot:
-
-Also called Norwegian scabies, crusted scabies is a very severe infestation involving tens of thousands of mites on a single person. This causes the skin to develop thick crusts full of mites and eggs. Crusted scabies is most common in people with weakened immune systems, the elderly, and people who are disabled. This type of scabies is highly contagious and requires swift treatment to prevent outbreaks.
-
-^ Source: WebMD
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-what are some of the symptoms
-
-Chatbot:
-
-Between the fingers
-Wrist
-Elbow
-Armpit
-Genitals (Penis and Vagina)
-Nipple
-Waist
-Buttocks
-Shoulder blades
-Children are often more likely to get scabies. For babies and very young children scabies is often found on the head, face, neck, palms, and soles of the feet.
-For people who have never had scabies before, symptoms usually take 4-6 weeks to appear. Symptoms appear more quickly in people who have had scabies before, in as few as 1 to 4 days. Scabies mites can spread to other parts of the body and from one person to another person even before symptoms start.
-The same mite that causes scabies also causes crusted scabies. Crusted scabies is severe scabies that happens in people who have weakened immune systems. People with crusted scabies are infested with very large numbers of mites. This increases their risk of spreading mites to others, either from brief skin-to-skin contact or from contact with items such as bedding, clothing, furniture, rugs, and carpeting.
-
-^ Source: CDC
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: Would you like more information?
-yeah
-
-Chatbot:
-
-When a person is infested with scabies for the first time, it can take four to six weeks for the skin to react. The most common symptoms are:
-Intense itching, especially at night
-A pimple-like rash
-Scales or blisters
-Sores caused by scratching
-
-^ Source: WebMD
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-whats the reatment plan for it
-
-Chatbot:
-I do not know this information. Try asking something different, or in a different way.
-Please check that you havent misspelled your question.
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-whats the treatment plan for it
-
-Chatbot:
-
-Rx Creams
-Scabies will not go away on its own. It can only be cured with prescription medications that kill the mites. Treatment is a cream or lotion that is applied to the entire body from the neck down in most cases. It is left on for 8 to 14 hours and then washed off. In some cases, a doctor may prescribe pills to treat scabies. Treatment takes up to three days, depending on the medication used.
-
-^ Source: WebMD
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: Would you like more information?
-yes
-
-Chatbot:
-
-Itch Relief
-While prescriptions can kill scabies mites and their eggs, they don't provide any immediate itch relief. To control itching, especially at night, antihistamine pills can help. Hydrocortisone cream may also help, but it can change the appearance of the scabies rash, making the condition harder to diagnose. It's best to use this cream only after your doctor has confirmed the diagnosis.
-
-^ Source: WebMD
----------------
-
-When someone is diagnosed with scabies, anyone who has close physical contact with the person should also be treated. Close contact includes bathing together, sleeping in the same bed, or even holding hands. Doctors usually recommend treating all members of the household, even if symptoms are not present. (Remember, it can take four to six weeks for symptoms to appear.)
-
-^ Source: WebMD
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-are there complications
-
-Chatbot:
-
-The intense itch of scabies makes it difficult to resist scratching. Frequent scratching can create open sores that are prone to infection. Bacterial skin infections, such as impetigo, are the most common complication of scabies. Symptoms may include honey-colored, oozing blisters. This type of infection is usually treated with antibiotics.
-
-^ Source: WebMD
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
-Chatbot: What other questions do you have about scabies?
-Enter (q)uit to exit chat
-tell me everything i can know about the disease
+tell me everything you know about the disease
 
 Chatbot:
 
@@ -399,7 +187,224 @@ Scabies medications can kill the mites and eggs quickly, and patients can usuall
 
 Chatbot: What other questions do you have about scabies?
 Enter (q)uit to exit chat
+what is it
+
+Chatbot:
+
+Scabies is a skin condition in people caused by the human itch mite. The mite burrows into the upper layer of skin to live and lay eggs.
+
+^ Source: CDC
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+yes
+
+Chatbot:
+
+Scabies is not an infection, but an infestation. Tiny mites called Sarcoptes scabiei set up shop in the outer layers of human skin. The skin does not take kindly to the invasion. As the mites burrow and lay eggs inside the skin, the infestation leads to relentless itching and an angry rash.
+
+^ Source: WebMD
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+whos at risk
+
+Chatbot:
+
+Scabies is found worldwide and can spread rapidly under crowded conditions where close skin-to-skin contact is frequent. Child-care facilities, nursing homes, extended-care facilities, and prisons are often sites of scabies outbreaks. Scabies is more common in long-term travelers than in those who travel for less than 8 weeks at a time.
+Animals do not have scabies and cannot spread scabies to people.
+
+^ Source: CDC
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+yeah
+
+Chatbot:
+
+Anyone can get scabies, but those at higher risk include:
+Sexually active adults
+Prison inmates
+People in institutional care
+People living in crowded conditions
+People in child care facilities
+
+^ Source: WebMD
+---------------
+
+When someone is diagnosed with scabies, anyone who has close physical contact with the person should also be treated. Close contact includes bathing together, sleeping in the same bed, or even holding hands. Doctors usually recommend treating all members of the household, even if symptoms are not present. (Remember, it can take four to six weeks for symptoms to appear.)
+
+^ Source: WebMD
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+can travelers get scabies
+
+Chatbot:
+
+There is no vaccine or medicine to prevent scabies. Effective medicine to treat scabies is only available with a doctor's prescription.
+Travelers can avoid scabies by not touching or having close skin-to-skin contact with a person who has a rash or who is itching. Avoid touching or handling a sick person’s clothing or bedding.
+Scabies mites die when you wash bedding and clothing using hot water and hot dryer cycles or dry-clean the items. Items that cannot be dry-cleaned or laundered can be disinfested by storing them in a closed plastic bag for more than 72 hours. Scabies mites generally do not survive more than 2 to 3 days away from human skin.
+
+
+^ Source: CDC
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+is there more than one type
+
+Chatbot:
+
+Also called Norwegian scabies, crusted scabies is a very severe infestation involving tens of thousands of mites on a single person. This causes the skin to develop thick crusts full of mites and eggs. Crusted scabies is most common in people with weakened immune systems, the elderly, and people who are disabled. This type of scabies is highly contagious and requires swift treatment to prevent outbreaks.
+
+^ Source: WebMD
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+how to get diagnosed
+
+Chatbot:
+
+In most cases, a doctor can identify scabies based on the appearance of the rash and your description of the itch. Sometimes a skin scraping is used to confirm the diagnosis. This involves collecting skin from the affected area and using a microscope to check the sample for mites, eggs, or fecal matter.
+
+^ Source: WebMD
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+what should i look for in symptoms
+
+Chatbot:
+
+Between the fingers
+Wrist
+Elbow
+Armpit
+Genitals (Penis and Vagina)
+Nipple
+Waist
+Buttocks
+Shoulder blades
+Children are often more likely to get scabies. For babies and very young children scabies is often found on the head, face, neck, palms, and soles of the feet.
+For people who have never had scabies before, symptoms usually take 4-6 weeks to appear. Symptoms appear more quickly in people who have had scabies before, in as few as 1 to 4 days. Scabies mites can spread to other parts of the body and from one person to another person even before symptoms start.
+The same mite that causes scabies also causes crusted scabies. Crusted scabies is severe scabies that happens in people who have weakened immune systems. People with crusted scabies are infested with very large numbers of mites. This increases their risk of spreading mites to others, either from brief skin-to-skin contact or from contact with items such as bedding, clothing, furniture, rugs, and carpeting.
+
+^ Source: CDC
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+yes!
+
+Chatbot:
+
+When a person is infested with scabies for the first time, it can take four to six weeks for the skin to react. The most common symptoms are:
+Intense itching, especially at night
+A pimple-like rash
+Scales or blisters
+Sores caused by scratching
+
+^ Source: WebMD
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+what about the treatment of it
+
+Chatbot:
+
+Rx Creams
+Scabies will not go away on its own. It can only be cured with prescription medications that kill the mites. Treatment is a cream or lotion that is applied to the entire body from the neck down in most cases. It is left on for 8 to 14 hours and then washed off. In some cases, a doctor may prescribe pills to treat scabies. Treatment takes up to three days, depending on the medication used.
+
+^ Source: WebMD
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+yes please
+
+Chatbot:
+
+Itch Relief
+While prescriptions can kill scabies mites and their eggs, they don't provide any immediate itch relief. To control itching, especially at night, antihistamine pills can help. Hydrocortisone cream may also help, but it can change the appearance of the scabies rash, making the condition harder to diagnose. It's best to use this cream only after your doctor has confirmed the diagnosis.
+
+^ Source: WebMD
+---------------
+
+When someone is diagnosed with scabies, anyone who has close physical contact with the person should also be treated. Close contact includes bathing together, sleeping in the same bed, or even holding hands. Doctors usually recommend treating all members of the household, even if symptoms are not present. (Remember, it can take four to six weeks for symptoms to appear.)
+
+^ Source: WebMD
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+complications?
+
+Chatbot:
+
+The intense itch of scabies makes it difficult to resist scratching. Frequent scratching can create open sores that are prone to infection. Bacterial skin infections, such as impetigo, are the most common complication of scabies. Symptoms may include honey-colored, oozing blisters. This type of infection is usually treated with antibiotics.
+
+^ Source: WebMD
+---------------
+
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+hi
+
+Chatbot:
+Hello!
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+hows the weather
+
+Chatbot:
+The weather is ok.
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
 q
 Goodbye!
 EXITING PROGRAM
-sarajones@Randy CSCE240H-Spring2023-Rae % 

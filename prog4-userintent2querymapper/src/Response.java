@@ -12,7 +12,7 @@ public class Response {
 
     public static String chosenQuery(String userInput) {
         String[][] knownQueries = {{"What Scabies", "Who Risk", "What can travelers do to prevent scabies", "Type of Scabies", "ympt", "Diag", "Treat", "ompli", "Tell me everything"},{"What is", "Who", "travel", "Crusted", "ymptoms", "Diagnosing", "Treating", "Complications", "everything"}};
-        String [][] knownKeywords ={{"cab", "it", "everything", "risk", "who", "travel", "ype", "ympt", "diag", "treat", "ompli"},{"What is", "What is", "everything", "Who",  "Who", "travel", "Crusted", "ymptoms", "Diagnosing", "Treat", "Complications"}};
+        String [][] knownKeywords ={{"cab", "it","hi","eather", "everything", "risk", "who", "travel", "ype", "ympt", "diag", "treat", "ompli"},{"What is", "What is", "Hello!", "The weather is ok.",  "everything", "Who",  "Who", "travel", "Crusted", "ymptoms", "Diagnosing", "Treat", "Complications"}};
         String closestQuery = knownKeywords[0][0];
         int highMatchNum = 0;
   
@@ -69,8 +69,11 @@ public class Response {
             for(int i = 0; i < qnAs.size(); i++) {
                 answer = answer + "\n" + qnAs.get(i).getQuestion() +  "\n" + qnAs.get(i).getAnswer();
             }
-
             return answer;
+        }
+        else if (query.contains("eather") | query.contains("Hello!") ) {
+           
+            return query;
         }
         for(int i = 0; i < qnAs.size(); i++) {
             if (qnAs.get(i).getQuestion().contains(query)){
@@ -89,8 +92,8 @@ public class Response {
         String answer = handleQuerys(userInput, qnAs);
         int indexNextAnswer = answer.indexOf("-\n");
 
-        if (answer.contains("I do not know") | answer.contains("every")) {
-            return answer;
+        if (answer.contains("I do not know") | userInput.contains("every") | answer.contains("eather") | answer.contains("Hello!") ) {
+            return "ONLY" + answer;
         }
         else if (second && (indexNextAnswer + 2 == answer.length())) {
             return "no";
