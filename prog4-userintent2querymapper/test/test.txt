@@ -104,29 +104,6 @@ Animals do not have scabies and cannot spread scabies to people.
 
 - - - - - - - - - - - - - - - - - - - - - -
 
-Chatbot: Would you like more information?
-yes
-
-Chatbot:
-
-Anyone can get scabies, but those at higher risk include:
-Sexually active adults
-Prison inmates
-People in institutional care
-People living in crowded conditions
-People in child care facilities
-
-^ Source: WebMD
----------------
-
-When someone is diagnosed with scabies, anyone who has close physical contact with the person should also be treated. Close contact includes bathing together, sleeping in the same bed, or even holding hands. Doctors usually recommend treating all members of the household, even if symptoms are not present. (Remember, it can take four to six weeks for symptoms to appear.)
-
-^ Source: WebMD
----------------
-
-
-- - - - - - - - - - - - - - - - - - - - - -
-
 Chatbot: What other questions do you have about scabies?
 Enter (q)uit to exit chat
 is there more than one type of scabies

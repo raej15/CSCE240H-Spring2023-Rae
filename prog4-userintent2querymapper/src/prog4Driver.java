@@ -1,12 +1,8 @@
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.ArrayList;
 
 /**
  * takes input files and answers questions based on them
- * Credit: https://www.w3schools.com/java/java_regex.asp for help with pattern matching
- * Credit: Used a significant amount of my code from prog2-processor
  * @author Rae Jones
  */
 public class prog4Driver {

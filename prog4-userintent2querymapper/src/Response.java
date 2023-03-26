@@ -4,8 +4,9 @@ import java.util.regex.Pattern;
 
 
 /**
- * 
+ * Takes in user query and responds with revelvant information
  * Credit: https://stackoverflow.com/questions/7929495/java-finding-the-number-of-word-matches-in-a-given-string for pattern matching in confidence estimation
+ * @author Rae Jones
  */
 public class Response {
 

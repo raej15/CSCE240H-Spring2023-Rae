@@ -5,23 +5,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
 
+/**
+ * loads in data from CDC and WebMD
+ * Credit: https://www.w3schools.com/java/java_regex.asp for help with pattern matching
+ * @author Rae Jones
+ */
 public class DataLoader {
-
-    /*
-    public static void main(String[] args) {
-        ArrayList<QnA> qnAs = new ArrayList<QnA>();
-        qnAs.addAll(loadCDC());
-        qnAs.addAll(loadWebMD());
-
-        for(int i = 0; i < qnAs.size(); i++) {   
-            System.out.print("\nQUESTION:\n"+ qnAs.get(i).getQuestion()+"\n");
-            System.out.print("\nANSWER:\n"+ qnAs.get(i).getAnswer()+"\n");
-        } 
-
-    }
-
-     */
-    
 
     static boolean lastQuestion;
     static int currIndex = -1;
