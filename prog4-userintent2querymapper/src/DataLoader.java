@@ -20,11 +20,6 @@ public class DataLoader {
     static boolean matchFound;
 
     public static ArrayList<QnA> loadCDC() {
-        //Scanner keyboard = new Scanner(System.in);
-        //String currLine;
-        //Pattern pattern = Pattern.compile("^[A-Z]", Pattern.CASE_INSENSITIVE);
-       // Matcher matcher;
-        //boolean matchFound;
         ArrayList<QnA> cQnAs = new ArrayList<QnA>();
         QnA wcurrQnA;
 
@@ -59,9 +54,6 @@ public class DataLoader {
             System.out.println("no file");
             e.printStackTrace();
         }
-
-        //keyboard.close();
-        //currIndex = 3;
         return cQnAs;
     }
 
