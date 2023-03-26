@@ -47,15 +47,7 @@ public class Response {
          return totalMatches;
     }
 
-    public static int queryMatch1(String userInputWord, String knownQuery) {
-        String toMatch = userInputWord;
-        int matches = 0;  
-        Matcher matcher = Pattern.compile(toMatch, Pattern.CASE_INSENSITIVE).matcher(knownQuery);
-        while (matcher.find()) matches++;
-        return matches;
-
-    }
-
+    
     public static int queryMatch(String userInputWord, String knownQuery) {
         String toMatch = userInputWord.toLowerCase();
         int matches = 0;  
