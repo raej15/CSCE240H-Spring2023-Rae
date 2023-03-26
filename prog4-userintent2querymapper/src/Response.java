@@ -8,73 +8,22 @@ import java.util.regex.Pattern;
  * Credit: https://stackoverflow.com/questions/7929495/java-finding-the-number-of-word-matches-in-a-given-string for pattern matching in confidence estimation
  */
 public class Response {
-    
-    
-   /*
-   public static void main(String[] args) {
-       //System.out.println(handleQuerys(" poop"));
-        ArrayList<QnA> qnAs = new ArrayList<QnA>();
-        qnAs.addAll(DataLoader.loadCDC());
-        qnAs.addAll(DataLoader.loadWebMD());
-
-       String userInput = "poop";
-       System.out.println(userInput);
-       System.out.println(chosenQuery(userInput));
-       System.out.println(handleQuerys(userInput, qnAs));
-
-
-
-    }
-    */
-    
-    //static ArrayList<QnA> qnAs = new ArrayList<QnA>();
-
-    /*
-    public static ArrayList<QnA> popQNAS() {
-        ArrayList<QnA> qnAs = new ArrayList<QnA>();
-        qnAs.addAll(DataLoader.loadCDC());
-        qnAs.addAll(DataLoader.loadWebMD());
-         //TESTING QNA POPULATION
-         /*for(int i = 0; i < qnAs.size(); i++) {   
-            System.out.print("\nQUESTION:\n"+ qnAs.get(i).getQuestion()+"\n");
-            System.out.print("\nANSWER:\n"+ qnAs.get(i).getAnswer()+"\n");
-        } 
-        
-        return qnAs;
-    }
-
-    */
-    //public static String[][] knownQueries = {{"What is Scabies", "Who is at Risk", "What can travelers do to prevent scabies", "Types of Scabies", "Symptoms", "When to call a Doctor", "Scabies Diagnosis", "Scabies Treatment", "Scabies Complications", "Tell me everything"},{"What is", "Who", "travel"}};
-
 
     public static String chosenQuery(String userInput) {
-        String[][] knownQueries = {{"What Scabies", "Who Risk", "What can travelers do to prevent scabies", "Type of Scabies", "ympt", /*"When to call a Doctor",*/ "Diag", "Treat", "ompli", "Tell me everything"},{"What is", "Who", "travel", "Crusted", "ymptoms", "Diagnosing", "Treating", "Complications", "everything"}};
-        String [][] knownKeywords ={{"cab", "everything", "risk", "travel", "ype", "ympt", "diag", "treat", "ompli"},{"What is", "everything", "Who", "travel", "Crusted", "ymptoms", "Diagnosing", "Treating", "Complications"}};
-        //int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+        String[][] knownQueries = {{"What Scabies", "Who Risk", "What can travelers do to prevent scabies", "Type of Scabies", "ympt", "Diag", "Treat", "ompli", "Tell me everything"},{"What is", "Who", "travel", "Crusted", "ymptoms", "Diagnosing", "Treating", "Complications", "everything"}};
+        String [][] knownKeywords ={{"cab", "it", "everything", "risk", "who", "travel", "ype", "ympt", "diag", "treat", "ompli"},{"What is", "What is", "everything", "Who",  "Who", "travel", "Crusted", "ymptoms", "Diagnosing", "Treat", "Complications"}};
         String closestQuery = knownKeywords[0][0];
         int highMatchNum = 0;
-        //String[] uSplit = userInput.split("\\s");
-        String[] qSplit;
+  
 
         for (int row = 0; row < knownKeywords.length; row++) {
             for (int col = 0; col < knownKeywords[row].length; col++) {
-                 //board[row][col] = row * col; 
-                //System.out.println(queryConfidence(userInput, knownQueries[0][col]));
-
                 if (highMatchNum <= queryConfidence(userInput, knownKeywords[0][col])) {
                     highMatchNum = queryConfidence(userInput, knownKeywords[0][col]);
                     closestQuery = knownKeywords[1][col];
                 }
             } 
         }
-
-        //System.out.println(highMatchNum);
-
-        //System.out.println(closestQuery);
-
-        //for (int i=0; i < 10; i++) {
-         //   System.out.println(queryConfidence(userInput, knownQueries[i][0]));
-        //}
         if (highMatchNum==0) {
             return "";
         }
@@ -112,15 +61,12 @@ public class Response {
         if (toMatch.contains(knownQuery.toLowerCase())) {
             matches++;
         }
-        //Matcher matcher = Pattern.compile(toMatch, Pattern.CASE_INSENSITIVE).matcher(knownQuery);
-        //while (matcher.find()) matches++;
-        //System.out.println(userInputWord + " " + knownQuery + " " + matches);
         return matches;
 
     }
 
 
-    public static String handleQuerys(/*String query, */ String userInput, ArrayList<QnA> qnAs) {
+    public static String handleQuerys(String userInput, ArrayList<QnA> qnAs) {
         String query = chosenQuery(userInput);
         String answer = ""; 
         if (query == "") {
@@ -134,8 +80,8 @@ public class Response {
             return answer;
         }
         for(int i = 0; i < qnAs.size(); i++) {
-            if (qnAs.get(i).getQuestion().contains(query) /* | qnAs.get(i).getAnswer().contains(query)*/){
-                answer = answer + "\n" + /* for debuggung  qnAs.get(i).getQuestion() +  "\n" +*/ qnAs.get(i).getAnswer();
+            if (qnAs.get(i).getQuestion().contains(query)){
+                answer = answer + "\n" + qnAs.get(i).getAnswer();
             }
         }
 
@@ -143,25 +89,26 @@ public class Response {
             answer = "I do not know this information. Try asking something different, or in a different way.\nPlease check that you havent misspelled your question.";
         }
 
-        return "\nChatbot:\n" + answer;
+        return answer;
     }
 
-    public static String lastChanceHandle() {
-        return "yas";
+    public static String tellMore(String userInput, ArrayList<QnA> qnAs, boolean second) {
+        String answer = handleQuerys(userInput, qnAs);
+        int indexNextAnswer = answer.indexOf("-\n");
+
+        if (answer.contains("I do not know") | answer.contains("every")) {
+            return answer;
+        }
+        else if (second && (indexNextAnswer + 2 == answer.length())) {
+            return "no";
+        }
+        else if (second) {
+          return answer.substring(indexNextAnswer + 3, answer.length());
+        }
+        else {
+            return answer.substring(0,indexNextAnswer + 2);
+        }
+      
     }
-
-    /* 
-    public static void printResponse(String query) {
-        String answer = handleQuerys(query);
-        System.out.print("\nChatbot:\n");
-
-
-
-
-    }
-
-    */
-
-
 
 }
