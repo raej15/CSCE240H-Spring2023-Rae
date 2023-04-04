@@ -1,18 +1,30 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-
+import java.lang.StringBuilder;
 /**
  * Credit: https://stackoverflow.com/questions/18009416/how-to-count-total-rows-in-csv-using-java for sessionCounter method help
  * @author Rae Jones
  */
-public class sessionData {
+public class sessionData2 {
 
+    public static String loadCSV() {
+        String csvContent = "";
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
+            String line;
+
+            while((line = br.readLine()) != null)
+            {
+                csvContent += line + "\n";
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("An error has occurred.");
+        }
+        System.out.println(csvContent);
+        return csvContent;
+    }
     //fixed for S.No
-    /**
-     * checks if user's chat pick exists
-     * @param chatNum number of chat user wants info on
-     * @return true or false
-     */
     public static boolean checkSessionValid(int chatNum) {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
@@ -21,9 +33,13 @@ public class sessionData {
             while((line = br.readLine()) != null)
             {
                 String[] cols = line.split(",");
+                //duration += Long.parseLong(cols[4]);
                 
                 if(!cols[4].equals("time_taken")) {
                     if(Integer.parseInt(cols[0]) == chatNum) {
+                        //System.out.println("not header");
+                        //System.out.println(cols[0]);
+                        //duration += Double.parseDouble(cols[4]);
                         return true;
                     }
                 }
@@ -36,10 +52,6 @@ public class sessionData {
         return false;
     }
 
-    /**
-     * counts the num of chat logs that there are
-     * @return returns number of chat logs on record
-     */
     public static int sessionCounter() {
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
@@ -51,6 +63,7 @@ public class sessionData {
             }
     
             return count;
+            //System.out.println("Count : "+count);
             
         } catch (Exception e) {
             // TODO: handle exception
@@ -59,23 +72,25 @@ public class sessionData {
         }
     }
 
-    /**
-     * gets num of seconds the program has run over all logged sessions
-     * @return total duration of all logged runs in seconds
-     */
     public static double totalDuration() {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             String line;
             double duration = 0;
             while ((line = br.readLine()) != null) {
+                // use comma as separator
                 String[] cols = line.split(",");
-
+                //duration += Long.parseLong(cols[4]);
+                //System.out.println("Column 5=" + cols[4]);
                 if(!cols[4].equals("time_taken")) {
-
+                    //System.out.println("not header");
+                    //System.out.println(cols[4]);
+                    //System.out.println(Double.parseDouble(cols[4]));
                     duration += Double.parseDouble(cols[4]);
                 }
 
+                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
+                //System.out.println("mow");
             }
 
             return duration;
@@ -87,10 +102,6 @@ public class sessionData {
         }
     }
 
-    /**
-     * finds total num of user utterances in CSV file
-     * @return total num of user utterances
-     */
     public static int totalUserUtterances() {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
@@ -99,12 +110,17 @@ public class sessionData {
             while ((line = br.readLine()) != null) {
                 // use comma as separator
                 String[] cols = line.split(",");
-                
+                //duration += Long.parseLong(cols[4]);
+                //System.out.println("Column 5=" + cols[2]);
                 if(!cols[4].equals("time_taken")) {
-                    
+                    //System.out.println("not header");
+                    //System.out.println(cols[4]);
+                    //System.out.println(Double.parseDouble(cols[4]));
                     numUser += Integer.parseInt(cols[2]);
                 }
 
+                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
+                //System.out.println("mow");
             }
 
             return numUser;
@@ -115,10 +131,7 @@ public class sessionData {
             return 0;
         }
     }
-    /**
-     * finds total num of system utterances in CSV file
-     * @return total num of system utterances
-     */
+
     public static int totalSystemUtterances() {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
@@ -127,9 +140,14 @@ public class sessionData {
             while ((line = br.readLine()) != null) {
                 // use comma as separator
                 String[] cols = line.split(",");
+                //duration += Long.parseLong(cols[4]);
+                //System.out.println("Column 5=" + cols[3]);
                 if(!cols[4].equals("time_taken")) {
                     numSystem += Integer.parseInt(cols[3]);
                 }
+
+                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
+                //System.out.println("mow");
             }
 
             return numSystem;
@@ -141,11 +159,6 @@ public class sessionData {
         }
     }
 
-    /**
-     * finds num of system utterances for a selected chat in CSV file
-     * @param chatNum serial num of requested chat
-     * @return num of system utterances for the selected chat
-     */
     public static int systemUtterances(int chatNum) {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
@@ -174,11 +187,6 @@ public class sessionData {
         }
     }
 
-    /**
-     * finds num of user utterances for a selected chat in CSV file
-     * @param chatNum serial num of requested chat
-     * @return num of user utterances for the selected chat
-     */
     public static int userUtterances(int chatNum) {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
@@ -190,14 +198,19 @@ public class sessionData {
                 numLine++;
                 // use comma as separator
                 String[] cols = line.split(",");
- 
+                //duration += Long.parseLong(cols[4]);
+                //System.out.println("Column 5=" + cols[2]);
                 if(!cols[4].equals("time_taken")) {
                     if(Integer.parseInt(cols[0]) == chatNum-1) {
-                
+                        //System.out.println("not header");
+                        //System.out.println(cols[4]);
                         numUser += Integer.parseInt(cols[2]);
 
                     }
                 }
+
+                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
+                //System.out.println("mow");
             }
 
             return numUser;
@@ -210,11 +223,7 @@ public class sessionData {
     }
 
 
-    /**
-     * finds duration of a selected chat in CSV file
-     * @param chatNum serial num of requested chat
-     * @return duration of the selected chat (secs)
-     */
+    //fixed to rely on S.No
     public static double sessionDuration(int chatNum) {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
@@ -223,16 +232,20 @@ public class sessionData {
             //int numLine = 0;
             chatNum+=1;
             while ((line = br.readLine()) != null) {
-            
+                //numLine++;
+                // use comma as separator
                 String[] cols = line.split(",");
+                //duration += Long.parseLong(cols[4]);
                 
                 if(!cols[4].equals("time_taken")) {
                     if(Integer.parseInt(cols[0]) == chatNum-1) {
-
+                        //System.out.println("not header");
+                        //System.out.println(cols[4]);
                         duration += Double.parseDouble(cols[4]);
                     }
                 }
-             
+                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
+                //System.out.println("mow");
             }
 
             return duration;
@@ -244,10 +257,6 @@ public class sessionData {
         }
     }
 
-    /**
-     * finds file name of requested chat; runs showChat
-     * @param chatNum serial num of requested chat
-     */
     public static void sessionFileName(int chatNum) {
         String fileName = "";
         //finding correct file name
@@ -260,26 +269,32 @@ public class sessionData {
                 numLine++;
                 // use comma as separator
                 String[] cols = line.split(",");
+                //duration += Long.parseLong(cols[4]);
+                //System.out.println("Column 5=" + cols[2]);
                 if(!cols[4].equals("time_taken")) {
                     if(Integer.parseInt(cols[0]) == chatNum-1) {
-                     
+                        //System.out.println("not header");
+                        //System.out.println(cols[4]);
                         fileName = cols[1];
                     }
                 }
+
+                //System.out.println(fileName);
+                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
+                //System.out.println("mow");
             }
 
             showChat(fileName);
+            //return fileName.trim();
 
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println("An error has occurred.");
+            //return "fail";
         }
     }
 
-    /**
-     * returns log content for selected file
-     * @param fileName file name of the selected chat log
-     */
+    //fixed for S.No
     public static void showChat(String fileName) {
         //retrieving file contents
         try (BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/" + fileName))) {
@@ -298,20 +313,15 @@ public class sessionData {
            }    
     }
 
-    /**
-     * summary of all known data across all logs
-     * @return a string giving all availiable data over all sessions
-     */
     public static String totalSummary() {
         return "There are " + sessionCounter() + " chats to date with user asking " + totalUserUtterances() + " times and system responding " + totalSystemUtterances() + " times. Total duration is " + totalDuration() + " seconds.";
     }
 
-    /**
-     * summary of all known data for selected log
-     * @param chatNum serial num of requested chat
-     * @return a string giving all availiable data for the session
-     */
     public static String sessionSummary(int chatNum) {
         return "Chat " + chatNum + " has user asking " + userUtterances(chatNum) + " times and system responding " + systemUtterances(chatNum) + " times. Total duration is " + sessionDuration(chatNum) + " seconds.";
+    }
+
+    public static void main(String[] args) { 
+        loadCSV();
     }
 }
