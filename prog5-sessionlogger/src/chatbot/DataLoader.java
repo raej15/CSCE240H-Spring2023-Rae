@@ -19,6 +19,10 @@ public class DataLoader {
     static Matcher matcher;
     static boolean matchFound;
 
+    /**
+     * Loads CDC data into an Arraylist ad QnA objects
+     * @return arraylist of QnA objects
+     */
     public static ArrayList<QnA> loadCDC() {
         ArrayList<QnA> cQnAs = new ArrayList<QnA>();
         QnA wcurrQnA;
@@ -57,6 +61,10 @@ public class DataLoader {
         return cQnAs;
     }
 
+    /**
+     * Loads WebMD data into an Arraylist ad QnA objects
+     * @return arraylist of QnA objects
+     */
     public static ArrayList<QnA> loadWebMD() {
         ArrayList<QnA> wQnAs = new ArrayList<QnA>();
         QnA currQnA;

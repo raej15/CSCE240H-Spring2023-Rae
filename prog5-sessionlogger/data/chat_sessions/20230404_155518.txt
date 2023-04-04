@@ -1,0 +1,31 @@
+20230404_155518:Begin User Session
+20230404_155518:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230404_155521:User Input:scabies
+20230404_155521:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_155525:User Input:hi
+20230404_155525:System Output:
+Chatbot:
+Hello!
+20230404_155525:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_155535:User Input:whats the weather like
+20230404_155535:System Output:
+Chatbot:
+The weather is ok.
+20230404_155535:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_155538:User Input:q

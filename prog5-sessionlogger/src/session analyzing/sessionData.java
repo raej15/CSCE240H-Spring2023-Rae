@@ -7,7 +7,6 @@ import java.io.FileReader;
  */
 public class sessionData {
 
-    //fixed for S.No
     /**
      * checks if user's chat pick exists
      * @param chatNum number of chat user wants info on

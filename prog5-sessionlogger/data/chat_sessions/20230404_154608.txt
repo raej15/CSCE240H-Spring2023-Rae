@@ -1,0 +1,133 @@
+20230404_154608:Begin User Session
+20230404_154608:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230404_154611:User Input:scabies
+20230404_154611:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_154614:User Input:what is it
+20230404_154614:System Output:
+Chatbot:
+
+Scabies is a skin condition in people caused by the human itch mite. The mite burrows into the upper layer of skin to live and lay eggs.
+
+^ Source: CDC
+---------------
+
+20230404_154614:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230404_154616:User Input:yes
+20230404_154616:System Output:
+Chatbot:
+
+Scabies is not an infection, but an infestation. Tiny mites called Sarcoptes scabiei set up shop in the outer layers of human skin. The skin does not take kindly to the invasion. As the mites burrow and lay eggs inside the skin, the infestation leads to relentless itching and an angry rash.
+
+^ Source: WebMD
+---------------
+
+20230404_154616:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_154628:User Input:what are the complications
+20230404_154628:System Output:
+Chatbot:
+
+The intense itch of scabies makes it difficult to resist scratching. Frequent scratching can create open sores that are prone to infection. Bacterial skin infections, such as impetigo, are the most common complication of scabies. Symptoms may include honey-colored, oozing blisters. This type of infection is usually treated with antibiotics.
+
+^ Source: WebMD
+---------------
+
+20230404_154628:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_154644:User Input:are there different types?
+20230404_154644:System Output:
+Chatbot:
+
+Also called Norwegian scabies, crusted scabies is a very severe infestation involving tens of thousands of mites on a single person. This causes the skin to develop thick crusts full of mites and eggs. Crusted scabies is most common in people with weakened immune systems, the elderly, and people who are disabled. This type of scabies is highly contagious and requires swift treatment to prevent outbreaks.
+
+^ Source: WebMD
+---------------
+
+20230404_154644:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_154652:User Input:what about travel?
+20230404_154652:System Output:
+Chatbot:
+
+There is no vaccine or medicine to prevent scabies. Effective medicine to treat scabies is only available with a doctor's prescription.
+Travelers can avoid scabies by not touching or having close skin-to-skin contact with a person who has a rash or who is itching. Avoid touching or handling a sick person’s clothing or bedding.
+Scabies mites die when you wash bedding and clothing using hot water and hot dryer cycles or dry-clean the items. Items that cannot be dry-cleaned or laundered can be disinfested by storing them in a closed plastic bag for more than 72 hours. Scabies mites generally do not survive more than 2 to 3 days away from human skin.
+
+
+^ Source: CDC
+---------------
+
+20230404_154652:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_154705:User Input:whats the treatment
+20230404_154705:System Output:
+Chatbot:
+
+Rx Creams
+Scabies will not go away on its own. It can only be cured with prescription medications that kill the mites. Treatment is a cream or lotion that is applied to the entire body from the neck down in most cases. It is left on for 8 to 14 hours and then washed off. In some cases, a doctor may prescribe pills to treat scabies. Treatment takes up to three days, depending on the medication used.
+
+^ Source: WebMD
+---------------
+
+20230404_154705:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230404_154707:User Input:yes
+20230404_154707:System Output:
+Chatbot:
+
+Itch Relief
+While prescriptions can kill scabies mites and their eggs, they don't provide any immediate itch relief. To control itching, especially at night, antihistamine pills can help. Hydrocortisone cream may also help, but it can change the appearance of the scabies rash, making the condition harder to diagnose. It's best to use this cream only after your doctor has confirmed the diagnosis.
+
+^ Source: WebMD
+---------------
+
+When someone is diagnosed with scabies, anyone who has close physical contact with the person should also be treated. Close contact includes bathing together, sleeping in the same bed, or even holding hands. Doctors usually recommend treating all members of the household, even if symptoms are not present. (Remember, it can take four to six weeks for symptoms to appear.)
+
+^ Source: WebMD
+---------------
+
+20230404_154707:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_154717:User Input:how would i get diagnosed
+20230404_154717:System Output:
+Chatbot:
+
+In most cases, a doctor can identify scabies based on the appearance of the rash and your description of the itch. Sometimes a skin scraping is used to confirm the diagnosis. This involves collecting skin from the affected area and using a microscope to check the sample for mites, eggs, or fecal matter.
+
+^ Source: WebMD
+---------------
+
+20230404_154717:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_154722:User Input:q

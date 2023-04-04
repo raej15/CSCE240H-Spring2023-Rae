@@ -148,7 +148,7 @@ public class prog5Driver {
             NumberFormat formatter = new DecimalFormat("#0.00000");
             //System.out.print("Execution time is " + formatter.format((endProg - startProg) / 1000d) + " seconds");
                 myWriter.write("\nLog Over\n");
-                statWriter.write(getChatNum() + "," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d) + "\n");
+                statWriter.write("\n" + getChatNum() + "," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d));
                 myWriter.close();
                 statWriter.close();
                 System.exit(0);
@@ -165,7 +165,7 @@ public class prog5Driver {
 
        
             //myWriter.write("\nLog Over\n");
-            statWriter.write(getChatNum() + "," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d) + "\n");
+            statWriter.write("\n" + getChatNum() + "," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d));
             myWriter.close();
             statWriter.close();
           } catch (IOException e) {
