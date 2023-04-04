@@ -27,20 +27,9 @@ public class prog5Driver {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
             int numLine = 0;
             String line;
-            int numUser = 0;
             chatNum+=1;
             while ((line = br.readLine()) != null) {
                 numLine++;
-                // use comma as separator
-                String[] cols = line.split(",");
-                //duration += Long.parseLong(cols[4]);
-                //System.out.println("Column 5=" + cols[2]);
-                //if(numLine == chatNum) {
-                    //numUser += Integer.parseInt(cols[2]);
-                //}
-
-                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
-                //System.out.println("mow");
             }
 
             return numLine+1;

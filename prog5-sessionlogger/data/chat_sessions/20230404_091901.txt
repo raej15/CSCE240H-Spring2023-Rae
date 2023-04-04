@@ -1,0 +1,30 @@
+20230404_091901:Begin User Session
+20230404_091901:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230404_091904:User Input:Scabies
+20230404_091904:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_091915:User Input:what about travelling 
+20230404_091915:System Output:
+Chatbot:
+
+There is no vaccine or medicine to prevent scabies. Effective medicine to treat scabies is only available with a doctor's prescription.
+Travelers can avoid scabies by not touching or having close skin-to-skin contact with a person who has a rash or who is itching. Avoid touching or handling a sick person’s clothing or bedding.
+Scabies mites die when you wash bedding and clothing using hot water and hot dryer cycles or dry-clean the items. Items that cannot be dry-cleaned or laundered can be disinfested by storing them in a closed plastic bag for more than 72 hours. Scabies mites generally do not survive more than 2 to 3 days away from human skin.
+
+
+^ Source: CDC
+---------------
+
+20230404_091915:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_091919:User Input:q
