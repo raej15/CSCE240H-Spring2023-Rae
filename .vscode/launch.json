@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "sessionData",
+      "request": "launch",
+      "mainClass": "sessionData",
+      "projectName": "CSCE240H-Spring2023-Rae_680ac858"
+    },
+    {
+      "type": "java",
+      "name": "prog5Driver",
+      "request": "launch",
+      "mainClass": "prog5Driver",
+      "projectName": "CSCE240H-Spring2023-Rae_680ac858"
+    },
+    {
+      "type": "java",
       "name": "prog1",
       "request": "launch",
       "mainClass": "prog1",
