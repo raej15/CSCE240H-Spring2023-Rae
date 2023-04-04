@@ -1,0 +1,40 @@
+20230403_224618:Begin User Session
+20230403_224618:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230403_224621:User Input:Scabies
+20230403_224621:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_224626:User Input:what is it
+20230403_224626:System Output:
+Chatbot:
+
+Scabies is a skin condition in people caused by the human itch mite. The mite burrows into the upper layer of skin to live and lay eggs.
+
+^ Source: CDC
+---------------
+
+20230403_224626:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230403_224627:User Input:yes
+20230403_224627:System Output:
+Chatbot:
+
+Scabies is not an infection, but an infestation. Tiny mites called Sarcoptes scabiei set up shop in the outer layers of human skin. The skin does not take kindly to the invasion. As the mites burrow and lay eggs inside the skin, the infestation leads to relentless itching and an angry rash.
+
+^ Source: WebMD
+---------------
+
+20230403_224627:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_224628:User Input:q

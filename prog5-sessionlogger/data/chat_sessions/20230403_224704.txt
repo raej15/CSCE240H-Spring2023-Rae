@@ -1,0 +1,60 @@
+20230403_224704:Begin User Session
+20230403_224704:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230403_224707:User Input:scabies
+20230403_224707:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_224713:User Input:what is it
+20230403_224713:System Output:
+Chatbot:
+
+Scabies is a skin condition in people caused by the human itch mite. The mite burrows into the upper layer of skin to live and lay eggs.
+
+^ Source: CDC
+---------------
+
+20230403_224713:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230403_224716:User Input:yes
+20230403_224716:System Output:
+Chatbot:
+
+Scabies is not an infection, but an infestation. Tiny mites called Sarcoptes scabiei set up shop in the outer layers of human skin. The skin does not take kindly to the invasion. As the mites burrow and lay eggs inside the skin, the infestation leads to relentless itching and an angry rash.
+
+^ Source: WebMD
+---------------
+
+20230403_224716:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_224721:User Input:who has it
+20230403_224721:System Output:
+Chatbot:
+
+Scabies is found worldwide and can spread rapidly under crowded conditions where close skin-to-skin contact is frequent. Child-care facilities, nursing homes, extended-care facilities, and prisons are often sites of scabies outbreaks. Scabies is more common in long-term travelers than in those who travel for less than 8 weeks at a time.
+Animals do not have scabies and cannot spread scabies to people.
+
+^ Source: CDC
+---------------
+
+20230403_224721:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230403_224729:User Input:no
+20230403_224729:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_224731:User Input:q

@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 public class prog5Driver {
 
     public static String getLogDate() {
-        String timeStamp = new SimpleDateFormat("yyyyMMdd HHmmss").format(new java.util.Date());
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new java.util.Date());
         return timeStamp;
      }
 
@@ -30,35 +30,41 @@ public class prog5Driver {
         String logFileName = getLogDate() + ".txt";
         int userUtterance = 0;
         int systemUtterance = 0;
+        String uniqueUserInput;
 
         try {
-            FileWriter myWriter = new FileWriter("prog5-sessionlogger/data/chat_sessions/log.txt");
+            FileWriter myWriter = new FileWriter("prog5-sessionlogger/data/chat_sessions/" + logFileName);
             FileWriter statWriter = new FileWriter("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv", true);
             myWriter.write(getLogDate() + ":Begin User Session");
-            System.out.println("Successfully wrote to the file.");
+            //System.out.println("Successfully wrote to the file.");
          
         
 
 
         System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What disease are you looking for information about? (input Scabies)\n");
+        myWriter.write("\n" + getLogDate() + ":System Output:" + "\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What disease are you looking for information about? (input Scabies)\n");
         systemUtterance++;
-        if (keyboard.nextLine().equalsIgnoreCase("scabies")) {
-                userUtterance++;
+        uniqueUserInput = keyboard.nextLine();
+        myWriter.write("\n" + getLogDate() + ":User Input:" + uniqueUserInput);
+        if (uniqueUserInput.equalsIgnoreCase("scabies")) {
             System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What questions do you have about scabies?\nEnter (q)uit to exit chat");
+            myWriter.write("\n" + getLogDate() + ":System Output:" + "\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What questions do you have about scabies?\nEnter (q)uit to exit chat");
             String userInput = keyboard.nextLine();
             myWriter.write("\n" + getLogDate() + ":User Input:" + userInput);
-            userUtterance++;
             systemUtterance++;
+            userUtterance++;
 
 
             while (!userInput.equalsIgnoreCase("q") & !userInput.equalsIgnoreCase("quit")) {
                 
                if (Response.tellMore(userInput, qnAs, true).equals("no")) {
                     System.out.println("\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
+                    myWriter.write("\n" + getLogDate() + ":System Output:" + "\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
                     systemUtterance++;
                     //writing
-                    myWriter.write("\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
+                    //myWriter.write("\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
                     System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
+                    myWriter.write("\n" + getLogDate() + ":System Output:" +"\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
                     userInput = keyboard.nextLine();
                     myWriter.write("\n" + getLogDate() + ":User Input:" + userInput);
                     userUtterance++;
@@ -67,8 +73,10 @@ public class prog5Driver {
                else if (Response.tellMore(userInput, qnAs, true).contains("ONLY")) {
                 String response = Response.tellMore(userInput, qnAs, false);
                 System.out.println("\nChatbot:\n" + response.substring(4, response.length()));
+                myWriter.write("\n" + getLogDate() + ":System Output:" +"\nChatbot:\n" + response.substring(4, response.length()));
                 systemUtterance++;
                 System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
+                myWriter.write("\n" + getLogDate() + ":System Output:" +"\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
                 userInput = keyboard.nextLine();
                 myWriter.write("\n" + getLogDate() + ":User Input:" + userInput);
                 userUtterance++;
@@ -77,22 +85,28 @@ public class prog5Driver {
                 }
                else {
                 System.out.println("\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
+                myWriter.write("\n" + getLogDate() + ":System Output:" +"\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
                 systemUtterance++;
                 //wrting
-                myWriter.write("\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
+                //myWriter.write("\nChatbot:\n" + Response.tellMore(userInput, qnAs, false));
                 System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: Would you like more information?");
+                myWriter.write("\n" + getLogDate() + ":System Output:" +"\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: Would you like more information?");
                 systemUtterance++;
-                if (!(keyboard.nextLine().equalsIgnoreCase("no"))) {
-                    myWriter.write("\n" + getLogDate() + ":User Input:yes"); //fix later
+                uniqueUserInput = keyboard.nextLine();
+                myWriter.write("\n" + getLogDate() + ":User Input:" + uniqueUserInput); //fix later
+                userUtterance++;
+                if (!(uniqueUserInput.equalsIgnoreCase("no"))) {
+                    //myWriter.write("\n" + getLogDate() + ":User Input:" + uniqueUserInput); //fix later
 
                     System.out.println("\nChatbot:\n\n" + Response.tellMore(userInput, qnAs, true));
+                    myWriter.write("\n" + getLogDate() + ":System Output:" +"\nChatbot:\n\n" + Response.tellMore(userInput, qnAs, true));
                     systemUtterance++;
-                    userUtterance++;
                 }
 
-                myWriter.write("\n" + getLogDate() + ":User Input:no"); //fix later
+                //myWriter.write("\n" + getLogDate() + ":User Input:" + uniqueUserInput); //fix later
 
                 System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
+                myWriter.write("\n" + getLogDate() + ":System Output:" + "\n- - - - - - - - - - - - - - - - - - - - - -\n\nChatbot: What other questions do you have about scabies?\nEnter (q)uit to exit chat");
                 systemUtterance++;
                 
                 userInput = keyboard.nextLine();
@@ -105,6 +119,7 @@ public class prog5Driver {
         } 
         else {
             System.out.println("I do not know this information. Try asking about scabies next time. \nEXITING PROGRAM");
+            myWriter.write("\n" + getLogDate() + ":System Output:" + "I do not know this information. Try asking about scabies next time. \nEXITING PROGRAM");
             userUtterance++;
             systemUtterance++;
             long endProg = System.currentTimeMillis();
@@ -117,7 +132,7 @@ public class prog5Driver {
                 System.exit(0);
 
         }
-        
+        userUtterance++;
         systemUtterance++;
         System.out.println("Goodbye!\nEXITING PROGRAM");
         keyboard.close();
@@ -127,7 +142,7 @@ public class prog5Driver {
 
 
        
-            myWriter.write("\nLog Over\n");
+            //myWriter.write("\nLog Over\n");
             statWriter.write("ADD NUM," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d) + "\n");
             myWriter.close();
             statWriter.close();

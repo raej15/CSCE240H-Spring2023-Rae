@@ -1,0 +1,27 @@
+20230403_224357:Begin User Session
+20230403_224357:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230403_224400:User Input:Scabies
+20230403_224400:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_224405:User Input:what types are there
+20230403_224405:System Output:
+Chatbot:
+
+Also called Norwegian scabies, crusted scabies is a very severe infestation involving tens of thousands of mites on a single person. This causes the skin to develop thick crusts full of mites and eggs. Crusted scabies is most common in people with weakened immune systems, the elderly, and people who are disabled. This type of scabies is highly contagious and requires swift treatment to prevent outbreaks.
+
+^ Source: WebMD
+---------------
+
+20230403_224405:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_224406:User Input:q

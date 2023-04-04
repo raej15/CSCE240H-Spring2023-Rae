@@ -6,6 +6,29 @@ import java.io.FileReader;
  */
 public class sessionData {
 
+    public static boolean checkSessionValid(int chatNum) {
+        int count = -1;
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            String input;
+            while((input = bufferedReader.readLine()) != null)
+            {
+                count++;
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("An error has occurred.");
+        }
+
+        if (chatNum > count) {
+            return false;
+
+        }
+        else {
+            return true;
+        }
+    }
+
     public static int sessionCounter() {
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
@@ -207,13 +230,13 @@ public class sessionData {
         }
     }
 
-    public static String showChat(int chatNum) {
+    public static void sessionFileName(int chatNum) {
+        String fileName = "";
         //finding correct file name
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
             int numLine = 0;
             String line;
-            String fileName = "";
             chatNum+=1;
             while ((line = br.readLine()) != null) {
                 numLine++;
@@ -225,20 +248,24 @@ public class sessionData {
                     fileName = cols[1];
                 }
 
-                System.out.println(fileName);
+                //System.out.println(fileName);
                 //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
                 //System.out.println("mow");
             }
 
-            return "suc";
+            showChat(fileName);
+            //return fileName.trim();
 
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println("An error has occurred.");
+            //return "fail";
         }
+    }
 
+    public static String showChat(String fileName) {
         //retrieving file contents
-        try (BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/" + fileName))) {
 
             String strCurrentLine;
          
@@ -248,9 +275,12 @@ public class sessionData {
          
            } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("An error has occurred.");
+
 
            }
         return "no";
+    
     }
 
     public static String totalSummary() {
@@ -265,7 +295,7 @@ public class sessionData {
        
        //System.out.println("numSessions: " + sessionCounter() + "\nDuration: " + totalDuration() + "\nUser Utterances: " + totalUserUtterances() +  "\nSystem Utterances: " + totalSystemUtterances());
        System.out.println(totalSummary());
-       System.out.println(sessionSummary(1));
-       System.out.println(showChat(1));
+       System.out.println(sessionSummary(4));
+       sessionFileName(5);
     }
 }
