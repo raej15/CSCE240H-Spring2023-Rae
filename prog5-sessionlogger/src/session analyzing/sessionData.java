@@ -291,14 +291,4 @@ public class sessionData {
     public static String sessionSummary(int chatNum) {
         return "Chat " + chatNum + " has user asking " + userUtterances(chatNum) + " times and system responding " + systemUtterances(chatNum) + " times. Total duration is " + sessionDuration(chatNum) + " seconds.";
     }
-
-    public static void main(String[] args) {
-       
-       //System.out.println("numSessions: " + sessionCounter() + "\nDuration: " + totalDuration() + "\nUser Utterances: " + totalUserUtterances() +  "\nSystem Utterances: " + totalSystemUtterances());
-       System.out.println(totalSummary());
-       System.out.println(sessionSummary(4));
-       sessionFileName(5);
-
-
-    }
 }
