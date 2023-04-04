@@ -10,7 +10,7 @@ public class sessionData {
     //fixed for S.No
     public static boolean checkSessionValid(int chatNum) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             String line;
 
             while((line = br.readLine()) != null)
@@ -21,7 +21,7 @@ public class sessionData {
                 if(!cols[4].equals("time_taken")) {
                     if(Integer.parseInt(cols[0]) == chatNum) {
                         //System.out.println("not header");
-                        System.out.println(cols[0]);
+                        //System.out.println(cols[0]);
                         //duration += Double.parseDouble(cols[4]);
                         return true;
                     }
@@ -37,7 +37,7 @@ public class sessionData {
 
     public static int sessionCounter() {
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             String input;
             int count = -1;
             while((input = bufferedReader.readLine()) != null)
@@ -57,7 +57,7 @@ public class sessionData {
 
     public static double totalDuration() {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             String line;
             double duration = 0;
             while ((line = br.readLine()) != null) {
@@ -87,7 +87,7 @@ public class sessionData {
 
     public static int totalUserUtterances() {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             String line;
             int numUser = 0;
             while ((line = br.readLine()) != null) {
@@ -117,7 +117,7 @@ public class sessionData {
 
     public static int totalSystemUtterances() {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             String line;
             int numSystem = 0;
             while ((line = br.readLine()) != null) {
@@ -144,7 +144,7 @@ public class sessionData {
 
     public static int systemUtterances(int chatNum) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             String line;
             int numSystem = 0;
             chatNum+=1;
@@ -172,7 +172,7 @@ public class sessionData {
 
     public static int userUtterances(int chatNum) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             int numLine = 0;
             String line;
             int numUser = 0;
@@ -209,7 +209,7 @@ public class sessionData {
     //fixed to rely on S.No
     public static double sessionDuration(int chatNum) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             String line;
             double duration = 0;
             //int numLine = 0;
@@ -244,7 +244,7 @@ public class sessionData {
         String fileName = "";
         //finding correct file name
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             int numLine = 0;
             String line;
             chatNum+=1;

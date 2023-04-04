@@ -24,7 +24,7 @@ public class prog5Driver {
     public static int getChatNum() {
         int chatNum = 0;
         try {
-            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_statistics.csv"));
             int numLine = 0;
             String line;
             chatNum+=1;
@@ -32,7 +32,7 @@ public class prog5Driver {
                 numLine++;
             }
 
-            return numLine+1;
+            return numLine/*+1*/;
 
         } catch (Exception e) {
             // TODO: handle exception
@@ -56,7 +56,7 @@ public class prog5Driver {
 
         try {
             FileWriter myWriter = new FileWriter("prog5-sessionlogger/data/chat_sessions/" + logFileName);
-            FileWriter statWriter = new FileWriter("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv", true);
+            FileWriter statWriter = new FileWriter("prog5-sessionlogger/data/chat_statistics.csv", true);
             myWriter.write(getLogDate() + ":Begin User Session");
             //System.out.println("Successfully wrote to the file.");
          
