@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "statsUI",
+      "request": "launch",
+      "mainClass": "statsUI",
+      "projectName": "CSCE240H-Spring2023-Rae_680ac858"
+    },
+    {
+      "type": "java",
       "name": "sessionData",
       "request": "launch",
       "mainClass": "sessionData",

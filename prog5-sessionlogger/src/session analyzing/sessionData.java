@@ -3,6 +3,7 @@ import java.io.FileReader;
 
 /**
  * Credit: https://stackoverflow.com/questions/18009416/how-to-count-total-rows-in-csv-using-java for sessionCounter method help
+ * @author Rae Jones
  */
 public class sessionData {
 
@@ -297,5 +298,7 @@ public class sessionData {
        System.out.println(totalSummary());
        System.out.println(sessionSummary(4));
        sessionFileName(5);
+
+
     }
 }
