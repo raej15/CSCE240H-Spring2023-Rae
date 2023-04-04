@@ -1,0 +1,82 @@
+20230403_231608:Begin User Session
+20230403_231608:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230403_231614:User Input:scabies
+20230403_231614:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_231628:User Input:how can i prevent scabies
+20230403_231628:System Output:
+Chatbot:
+
+Scabies is a skin condition in people caused by the human itch mite. The mite burrows into the upper layer of skin to live and lay eggs.
+
+^ Source: CDC
+---------------
+
+20230403_231628:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230403_231638:User Input:yes
+20230403_231638:System Output:
+Chatbot:
+
+Scabies is not an infection, but an infestation. Tiny mites called Sarcoptes scabiei set up shop in the outer layers of human skin. The skin does not take kindly to the invasion. As the mites burrow and lay eggs inside the skin, the infestation leads to relentless itching and an angry rash.
+
+^ Source: WebMD
+---------------
+
+20230403_231638:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_231657:User Input:what are some symptoms
+20230403_231657:System Output:
+Chatbot:
+
+Between the fingers
+Wrist
+Elbow
+Armpit
+Genitals (Penis and Vagina)
+Nipple
+Waist
+Buttocks
+Shoulder blades
+Children are often more likely to get scabies. For babies and very young children scabies is often found on the head, face, neck, palms, and soles of the feet.
+For people who have never had scabies before, symptoms usually take 4-6 weeks to appear. Symptoms appear more quickly in people who have had scabies before, in as few as 1 to 4 days. Scabies mites can spread to other parts of the body and from one person to another person even before symptoms start.
+The same mite that causes scabies also causes crusted scabies. Crusted scabies is severe scabies that happens in people who have weakened immune systems. People with crusted scabies are infested with very large numbers of mites. This increases their risk of spreading mites to others, either from brief skin-to-skin contact or from contact with items such as bedding, clothing, furniture, rugs, and carpeting.
+
+^ Source: CDC
+---------------
+
+20230403_231657:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230403_231705:User Input:yes
+20230403_231705:System Output:
+Chatbot:
+
+When a person is infested with scabies for the first time, it can take four to six weeks for the skin to react. The most common symptoms are:
+Intense itching, especially at night
+A pimple-like rash
+Scales or blisters
+Sores caused by scratching
+
+^ Source: WebMD
+---------------
+
+20230403_231705:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230403_231708:User Input:q
