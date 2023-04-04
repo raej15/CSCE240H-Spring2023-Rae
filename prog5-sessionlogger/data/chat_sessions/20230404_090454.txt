@@ -1,0 +1,13 @@
+20230404_090454:Begin User Session
+20230404_090454:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230404_090456:User Input:scabies
+20230404_090456:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_090459:User Input:q

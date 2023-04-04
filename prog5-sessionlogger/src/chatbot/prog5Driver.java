@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -18,6 +20,37 @@ public class prog5Driver {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new java.util.Date());
         return timeStamp;
      }
+
+    public static int getChatNum() {
+        int chatNum = 0;
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            int numLine = 0;
+            String line;
+            int numUser = 0;
+            chatNum+=1;
+            while ((line = br.readLine()) != null) {
+                numLine++;
+                // use comma as separator
+                String[] cols = line.split(",");
+                //duration += Long.parseLong(cols[4]);
+                //System.out.println("Column 5=" + cols[2]);
+                //if(numLine == chatNum) {
+                    //numUser += Integer.parseInt(cols[2]);
+                //}
+
+                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
+                //System.out.println("mow");
+            }
+
+            return numLine+1;
+
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("An error has occurred.");
+            return 0;
+        }
+    }
 
    public static void main(String[] args) {
         //get start runtime
@@ -126,7 +159,7 @@ public class prog5Driver {
             NumberFormat formatter = new DecimalFormat("#0.00000");
             //System.out.print("Execution time is " + formatter.format((endProg - startProg) / 1000d) + " seconds");
                 myWriter.write("\nLog Over\n");
-                statWriter.write("ADD NUM," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d) + "\n");
+                statWriter.write(getChatNum() + "," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d) + "\n");
                 myWriter.close();
                 statWriter.close();
                 System.exit(0);
@@ -143,7 +176,7 @@ public class prog5Driver {
 
        
             //myWriter.write("\nLog Over\n");
-            statWriter.write("ADD NUM," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d) + "\n");
+            statWriter.write(getChatNum() + "," +logFileName + "," + userUtterance + "," + systemUtterance + ","+ formatter.format((endProg - startProg) / 1000d) + "\n");
             myWriter.close();
             statWriter.close();
           } catch (IOException e) {

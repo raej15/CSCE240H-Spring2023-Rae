@@ -1,0 +1,23 @@
+20230404_084035:Begin User Session
+20230404_084035:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230404_084039:User Input:scabies
+20230404_084039:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_084041:User Input:poop
+20230404_084041:System Output:
+Chatbot:
+I do not know this information. Try asking something different, or in a different way.
+Please check that you havent misspelled your question.
+20230404_084041:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_084042:User Input:q

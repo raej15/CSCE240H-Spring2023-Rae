@@ -7,27 +7,32 @@ import java.io.FileReader;
  */
 public class sessionData {
 
+    //fixed for S.No
     public static boolean checkSessionValid(int chatNum) {
-        int count = -1;
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
-            String input;
-            while((input = bufferedReader.readLine()) != null)
+            BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
+            String line;
+
+            while((line = br.readLine()) != null)
             {
-                count++;
+                String[] cols = line.split(",");
+                //duration += Long.parseLong(cols[4]);
+                
+                if(!cols[4].equals("time_taken")) {
+                    if(Integer.parseInt(cols[0]) == chatNum) {
+                        //System.out.println("not header");
+                        System.out.println(cols[0]);
+                        //duration += Double.parseDouble(cols[4]);
+                        return true;
+                    }
+                }
             }
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println("An error has occurred.");
         }
 
-        if (chatNum > count) {
-            return false;
-
-        }
-        else {
-            return true;
-        }
+        return false;
     }
 
     public static int sessionCounter() {
@@ -140,22 +145,20 @@ public class sessionData {
     public static int systemUtterances(int chatNum) {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
-            int numLine = 0;
             String line;
             int numSystem = 0;
             chatNum+=1;
             while ((line = br.readLine()) != null) {
-                numLine++;
-                // use comma as separator
+                // using comma to split
                 String[] cols = line.split(",");
-                //duration += Long.parseLong(cols[4]);
-                //System.out.println("Column 5=" + cols[3]);
-                if(numLine == chatNum) {
-                    numSystem += Integer.parseInt(cols[3]);
-                }
 
-                //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
-                //System.out.println("mow");
+                //eliminating header row from consideration
+                if(!cols[4].equals("time_taken")) {
+                    if(Integer.parseInt(cols[0]) == chatNum-1) {
+                        //getting correct chat's data
+                        numSystem += Integer.parseInt(cols[3]);
+                    }
+                }
             }
 
             return numSystem;
@@ -180,8 +183,13 @@ public class sessionData {
                 String[] cols = line.split(",");
                 //duration += Long.parseLong(cols[4]);
                 //System.out.println("Column 5=" + cols[2]);
-                if(numLine == chatNum) {
-                    numUser += Integer.parseInt(cols[2]);
+                if(!cols[4].equals("time_taken")) {
+                    if(Integer.parseInt(cols[0]) == chatNum-1) {
+                        //System.out.println("not header");
+                        //System.out.println(cols[4]);
+                        numUser += Integer.parseInt(cols[2]);
+
+                    }
                 }
 
                 //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
@@ -198,26 +206,27 @@ public class sessionData {
     }
 
 
+    //fixed to rely on S.No
     public static double sessionDuration(int chatNum) {
         try {
             BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/chat_statistics.csv"));
             String line;
             double duration = 0;
-            int numLine = 0;
+            //int numLine = 0;
             chatNum+=1;
             while ((line = br.readLine()) != null) {
-                numLine++;
+                //numLine++;
                 // use comma as separator
                 String[] cols = line.split(",");
                 //duration += Long.parseLong(cols[4]);
-                //System.out.println("Column 5=" + cols[4]);
-                if(numLine == chatNum) {
-                    //System.out.println("not header");
-                    //System.out.println(cols[4]);
-                    //System.out.println(Double.parseDouble(cols[4]));
-                    duration += Double.parseDouble(cols[4]);
+                
+                if(!cols[4].equals("time_taken")) {
+                    if(Integer.parseInt(cols[0]) == chatNum-1) {
+                        //System.out.println("not header");
+                        //System.out.println(cols[4]);
+                        duration += Double.parseDouble(cols[4]);
+                    }
                 }
-
                 //System.out.println("Coulmn 4= " + cols[2] + " , Column 5=" + cols[4]);
                 //System.out.println("mow");
             }
@@ -245,8 +254,12 @@ public class sessionData {
                 String[] cols = line.split(",");
                 //duration += Long.parseLong(cols[4]);
                 //System.out.println("Column 5=" + cols[2]);
-                if(numLine == chatNum) {
-                    fileName = cols[1];
+                if(!cols[4].equals("time_taken")) {
+                    if(Integer.parseInt(cols[0]) == chatNum-1) {
+                        //System.out.println("not header");
+                        //System.out.println(cols[4]);
+                        fileName = cols[1];
+                    }
                 }
 
                 //System.out.println(fileName);
@@ -264,7 +277,8 @@ public class sessionData {
         }
     }
 
-    public static String showChat(String fileName) {
+    //fixed for S.No
+    public static void showChat(String fileName) {
         //retrieving file contents
         try (BufferedReader br = new BufferedReader(new FileReader("prog5-sessionlogger/data/chat_sessions/" + fileName))) {
 
@@ -276,12 +290,10 @@ public class sessionData {
          
            } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("An error has occurred.");
+            System.out.println("Chat contents not available. Please check that file has not been deleted.");
 
 
-           }
-        return "no";
-    
+           }    
     }
 
     public static String totalSummary() {
