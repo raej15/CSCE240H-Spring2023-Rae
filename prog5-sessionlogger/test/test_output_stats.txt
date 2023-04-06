@@ -1,0 +1,170 @@
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+HOME MENU:
+
+Would you like to 
+1. get overall summary
+2. look at a specific chat's data
+3. quit
+
+User: 1
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Overall Chat Log Summary:
+
+There are 12 chats to date with user asking 47 times and system responding 81 times. Total duration is 281.006 seconds.
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+HOME MENU:
+
+Would you like to 
+1. get overall summary
+2. look at a specific chat's data
+3. quit
+
+User: 2
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Enter the chat # you'd like to see
+6
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Would you like to 
+1. show chat log
+2. look at chat's summary
+3. quit
+
+User: 2
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chat 6's Session Summary:
+
+Chat 6 has user asking 6 times and system responding 10 times. Total duration is 95.991 seconds.
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+HOME MENU:
+
+Would you like to 
+1. get overall summary
+2. look at a specific chat's data
+3. quit
+
+User: 2
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Enter the chat # you'd like to see
+6
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Would you like to 
+1. show chat log
+2. look at chat's summary
+3. quit
+
+User: 1
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+ Your Chat 6 Log:
+
+
+20230404_092118:Begin User Session
+20230404_092118:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230404_092121:User Input:Scabies
+20230404_092121:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_092127:User Input:whho can get it
+20230404_092127:System Output:
+Chatbot:
+
+Scabies is a skin condition in people caused by the human itch mite. The mite burrows into the upper layer of skin to live and lay eggs.
+
+^ Source: CDC
+---------------
+
+20230404_092127:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230404_092129:User Input:yes
+20230404_092129:System Output:
+Chatbot:
+
+Scabies is not an infection, but an infestation. Tiny mites called Sarcoptes scabiei set up shop in the outer layers of human skin. The skin does not take kindly to the invasion. As the mites burrow and lay eggs inside the skin, the infestation leads to relentless itching and an angry rash.
+
+^ Source: WebMD
+---------------
+
+20230404_092129:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_092135:User Input:what is it
+20230404_092135:System Output:
+Chatbot:
+
+Scabies is a skin condition in people caused by the human itch mite. The mite burrows into the upper layer of skin to live and lay eggs.
+
+^ Source: CDC
+---------------
+
+20230404_092135:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230404_092136:User Input:no
+20230404_092136:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230404_092254:User Input:q
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+HOME MENU:
+
+Would you like to 
+1. get overall summary
+2. look at a specific chat's data
+3. quit
+
+User: 2
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+Enter the chat # you'd like to see
+200
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+ERROR: there are only 12 chat sessions. Please choose a valid number.
+
+- - - - - - - - - - - - - - - - - - - - - -
+
+HOME MENU:
+
+Would you like to 
+1. get overall summary
+2. look at a specific chat's data
+3. quit
+
+User: 3
+EXITING PROGRAM

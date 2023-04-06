@@ -13,17 +13,20 @@ public class statsUI {
 
         while (!(userInput == 3)) {
             System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nHOME MENU:\n\nWould you like to \n1. get overall summary\n2. look at a specific chat's data\n3. quit");
+            System.out.print("\nUser: ");
             userInput = keyboard.nextInt();
             if (userInput == 1) {
-                System.out.println(sessionData.totalSummary());
+                System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nOverall Chat Log Summary:\n\n" + sessionData.totalSummary());
             }
             else if (userInput==2) {
                 System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nEnter the chat # you'd like to see");
                 userInput = keyboard.nextInt();
                 if (sessionData.checkSessionValid(userInput)) {
                     System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\nWould you like to \n1. show chat log\n2. look at chat's summary\n3. quit");
+                    System.out.print("\nUser: ");
                     uniqueUserInput = keyboard.nextInt();
                     if (uniqueUserInput == 1) {
+                        System.out.println("\n- - - - - - - - - - - - - - - - - - - - - -\n\n Your Chat " + userInput + " Log:\n\n");
                         sessionData.sessionFileName(userInput);
                     }
                     else if (uniqueUserInput == 2) {
@@ -41,6 +44,7 @@ public class statsUI {
 
             else if (userInput==3) {
                 System.out.println("EXITING PROGRAM");
+                keyboard.close();
                 System.exit(0);
             }
 
