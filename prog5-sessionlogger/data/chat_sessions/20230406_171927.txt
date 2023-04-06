@@ -1,0 +1,13 @@
+20230406_171927:Begin User Session
+20230406_171927:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230406_171934:User Input:scabies
+20230406_171934:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230406_171946:User Input:q

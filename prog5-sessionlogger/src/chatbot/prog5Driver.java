@@ -31,7 +31,7 @@ public class prog5Driver {
             while ((line = br.readLine()) != null) {
                 numLine++;
             }
-
+            br.close();
             return numLine/*+1*/;
 
         } catch (Exception e) {

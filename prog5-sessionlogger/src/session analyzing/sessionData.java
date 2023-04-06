@@ -28,7 +28,6 @@ public class sessionData {
                 }
             }
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
         }
 
@@ -49,13 +48,14 @@ public class sessionData {
                 count++;
             }
     
+            bufferedReader.close();
             return count;
             
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
             return 0;
         }
+        
     }
 
     /**
@@ -77,10 +77,10 @@ public class sessionData {
 
             }
 
+            br.close();
             return duration;
 
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
             return 0;
         }
@@ -105,11 +105,10 @@ public class sessionData {
                 }
 
             }
-
+            br.close();
             return numUser;
 
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
             return 0;
         }
@@ -131,10 +130,10 @@ public class sessionData {
                 }
             }
 
+            br.close();
             return numSystem;
 
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
             return 0;
         }
@@ -163,11 +162,10 @@ public class sessionData {
                     }
                 }
             }
-
+            br.close();
             return numSystem;
 
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
             return 0;
         }
@@ -198,11 +196,10 @@ public class sessionData {
                     }
                 }
             }
-
+            br.close();
             return numUser;
 
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
             return 0;
         }
@@ -233,11 +230,10 @@ public class sessionData {
                 }
              
             }
-
+            br.close();
             return duration;
 
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
             return 0;
         }
@@ -266,11 +262,10 @@ public class sessionData {
                     }
                 }
             }
-
+            br.close();
             showChat(fileName);
 
         } catch (Exception e) {
-            // TODO: handle exception
             System.out.println("An error has occurred.");
         }
     }
@@ -289,6 +284,7 @@ public class sessionData {
              System.out.println(strCurrentLine);
             }
          
+            br.close();
            } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Chat contents not available. Please check that file has not been deleted.");
