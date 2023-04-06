@@ -14,7 +14,7 @@ User: 1
 
 Overall Chat Log Summary:
 
-There are 12 chats to date with user asking 47 times and system responding 81 times. Total duration is 281.006 seconds.
+There are 13 chats to date with user asking 54 times and system responding 94 times. Total duration is 333.36299999999994 seconds.
 
 - - - - - - - - - - - - - - - - - - - - - -
 
@@ -155,7 +155,7 @@ Enter the chat # you'd like to see
 
 - - - - - - - - - - - - - - - - - - - - - -
 
-ERROR: there are only 12 chat sessions. Please choose a valid number.
+ERROR: there are only 13 chat sessions. Please choose a valid number.
 
 - - - - - - - - - - - - - - - - - - - - - -
 

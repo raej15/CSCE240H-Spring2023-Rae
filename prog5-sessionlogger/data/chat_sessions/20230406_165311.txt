@@ -1,0 +1,103 @@
+20230406_165311:Begin User Session
+20230406_165311:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What disease are you looking for information about? (input Scabies)
+
+20230406_165314:User Input:SCabies
+20230406_165314:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What questions do you have about scabies?
+Enter (q)uit to exit chat
+20230406_165328:User Input:how do i get diagnosed
+20230406_165328:System Output:
+Chatbot:
+
+In most cases, a doctor can identify scabies based on the appearance of the rash and your description of the itch. Sometimes a skin scraping is used to confirm the diagnosis. This involves collecting skin from the affected area and using a microscope to check the sample for mites, eggs, or fecal matter.
+
+^ Source: WebMD
+---------------
+
+20230406_165328:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230406_165344:User Input:what symptoms will they look for
+20230406_165344:System Output:
+Chatbot:
+
+Between the fingers
+Wrist
+Elbow
+Armpit
+Genitals (Penis and Vagina)
+Nipple
+Waist
+Buttocks
+Shoulder blades
+Children are often more likely to get scabies. For babies and very young children scabies is often found on the head, face, neck, palms, and soles of the feet.
+For people who have never had scabies before, symptoms usually take 4-6 weeks to appear. Symptoms appear more quickly in people who have had scabies before, in as few as 1 to 4 days. Scabies mites can spread to other parts of the body and from one person to another person even before symptoms start.
+The same mite that causes scabies also causes crusted scabies. Crusted scabies is severe scabies that happens in people who have weakened immune systems. People with crusted scabies are infested with very large numbers of mites. This increases their risk of spreading mites to others, either from brief skin-to-skin contact or from contact with items such as bedding, clothing, furniture, rugs, and carpeting.
+
+^ Source: CDC
+---------------
+
+20230406_165344:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230406_165350:User Input:yes
+20230406_165350:System Output:
+Chatbot:
+
+When a person is infested with scabies for the first time, it can take four to six weeks for the skin to react. The most common symptoms are:
+Intense itching, especially at night
+A pimple-like rash
+Scales or blisters
+Sores caused by scratching
+
+^ Source: WebMD
+---------------
+
+20230406_165350:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230406_165356:User Input:whats the treatment
+20230406_165356:System Output:
+Chatbot:
+
+Rx Creams
+Scabies will not go away on its own. It can only be cured with prescription medications that kill the mites. Treatment is a cream or lotion that is applied to the entire body from the neck down in most cases. It is left on for 8 to 14 hours and then washed off. In some cases, a doctor may prescribe pills to treat scabies. Treatment takes up to three days, depending on the medication used.
+
+^ Source: WebMD
+---------------
+
+20230406_165356:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: Would you like more information?
+20230406_165359:User Input:yes
+20230406_165359:System Output:
+Chatbot:
+
+Itch Relief
+While prescriptions can kill scabies mites and their eggs, they don't provide any immediate itch relief. To control itching, especially at night, antihistamine pills can help. Hydrocortisone cream may also help, but it can change the appearance of the scabies rash, making the condition harder to diagnose. It's best to use this cream only after your doctor has confirmed the diagnosis.
+
+^ Source: WebMD
+---------------
+
+When someone is diagnosed with scabies, anyone who has close physical contact with the person should also be treated. Close contact includes bathing together, sleeping in the same bed, or even holding hands. Doctors usually recommend treating all members of the household, even if symptoms are not present. (Remember, it can take four to six weeks for symptoms to appear.)
+
+^ Source: WebMD
+---------------
+
+20230406_165359:System Output:
+- - - - - - - - - - - - - - - - - - - - - -
+
+Chatbot: What other questions do you have about scabies?
+Enter (q)uit to exit chat
+20230406_165404:User Input:q
