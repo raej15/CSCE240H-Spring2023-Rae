@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <chrono>
 #include <iostream>
-#include<vector>
+#include <vector>
 using namespace std;
 using namespace std::chrono;
 
@@ -26,8 +26,8 @@ void popArray(int n, int arr[])
     }
 
     memmove( arr, popArr, sizeof(popArr) );
-    cout << popArr[9] << endl;
-    cout << arr[9] << endl;
+    //cout << popArr[9] << endl;
+    //cout << arr[9] << endl;
 }
 
 void bubbleSort(int arr[], int n)
@@ -56,25 +56,55 @@ void printArray(int arr[], int size)
 }
  
 int main() {
+        int userInput;
+	    cout << "- - - - - - - - - - - - - - - - - - - - - - - - - \n\nWhat size would you like your array to be?" << endl;
+    
+        //cin >> userInput;
 
-	    // Get starting timepoint
-	    auto start = high_resolution_clock::now();
+		userInput = 100000;
+        cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \n\nMaking your array...\n\nMay take up to 30 seconds if its size is ~ 100,000" << endl;
 
-	    cout << "- - - - - - - - - - - - - - - - - - - - - - - - - \nProgram Starting" << endl;
-		int userInput = 100000;
+	    // Get array starting timepoint
+        auto startArray = high_resolution_clock::now();
+
 		int arr[userInput];
         popArray(userInput, arr);
         int N = sizeof(arr) / sizeof(arr[0]);
         bubbleSort(arr, N);
-        cout << "Sorted array: \n";
+        cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \n\nSorted array:\n\n";
         printArray(arr, N);
 
-	    auto stop = high_resolution_clock::now();
+        //stopping clock
+	    auto stopArray = high_resolution_clock::now();
+
+        //getting array time
+	    auto durationArray = duration_cast<microseconds>(stopArray - startArray);
 
 
-	    auto duration = duration_cast<microseconds>(stop - start);
+        // Get vector starting timepoint
+        auto startVector = high_resolution_clock::now();
+        std::vector<int> v;
 
-	    cout << "\nProcessing Time: " << duration.count() << " microseconds" << "\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
+        v.resize(userInput);
+
+        srand (time(NULL));
+        for (int i = 0; i < v.size(); i++) {
+            v[i] = rand() % 100 + 1;
+        }
+
+        sort(v.begin(), v.end());
+    
+        cout << "\nSorted Vector:\n"<< endl;
+        for (auto x : v) {
+            cout << x << " ";
+        }
+
+	    auto stopVector = high_resolution_clock::now();
+
+        auto durationVector = duration_cast<microseconds>(stopVector - startVector);
+
+	    cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - -\n\nArray Processing Time: " << durationArray.count() << " microseconds" << endl;
+        cout << "\nVector Processing Time: " << durationVector.count() << " microseconds" << "\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
 
 	    return 0;
 }
