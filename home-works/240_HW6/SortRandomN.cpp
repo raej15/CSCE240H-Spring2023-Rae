@@ -13,16 +13,16 @@
 using namespace std;
 using namespace std::chrono;
 
-int arr[100000];
+//int arr[10];
 
-void popArray(int n)
+void popArray(int n, int arr[])
 {
     srand (time(NULL));
     int popArr[n];
     int i;
 
     for (i = 0; i < n - 1; i++) {
-        popArr[i] = rand() % 10 + 1;
+        popArr[i] = rand() % 100 + 1;
     }
 
     memmove( arr, popArr, sizeof(popArr) );
@@ -61,9 +61,9 @@ int main() {
 	    auto start = high_resolution_clock::now();
 
 	    cout << "- - - - - - - - - - - - - - - - - - - - - - - - - \nProgram Starting" << endl;
-			
-        popArray(100000);
-		//int arr[] = { 5, 1, 4, 2, 8};
+		int userInput = 100000;
+		int arr[userInput];
+        popArray(userInput, arr);
         int N = sizeof(arr) / sizeof(arr[0]);
         bubbleSort(arr, N);
         cout << "Sorted array: \n";
