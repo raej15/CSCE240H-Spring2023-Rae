@@ -13,7 +13,7 @@
 using namespace std;
 using namespace std::chrono;
 
-int arr[10];
+int arr[100000];
 
 void popArray(int n)
 {
@@ -62,7 +62,7 @@ int main() {
 
 	    cout << "- - - - - - - - - - - - - - - - - - - - - - - - - \nProgram Starting" << endl;
 			
-        popArray(1000);
+        popArray(100000);
 		//int arr[] = { 5, 1, 4, 2, 8};
         int N = sizeof(arr) / sizeof(arr[0]);
         bubbleSort(arr, N);
