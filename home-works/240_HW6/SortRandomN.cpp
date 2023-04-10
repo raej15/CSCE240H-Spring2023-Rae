@@ -89,8 +89,10 @@ int main() {
             cout << x << " ";
         }
 
+        //vector stop time
 	    auto stopVector = high_resolution_clock::now();
 
+        //vector duration
         auto durationVector = duration_cast<microseconds>(stopVector - startVector);
 
         cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \n\nMaking your array...\n\nMay take up to 30 seconds if its size is ~ 100,000" << endl;
@@ -111,6 +113,7 @@ int main() {
         //getting array time
 	    auto durationArray = duration_cast<microseconds>(stopArray - startArray);
 
+        //printing both processing times
 	    cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - -\n\nArray Processing Time: " << durationArray.count() << " microseconds" << endl;
         cout << "\nVector Processing Time: " << durationVector.count() << " microseconds" << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
 
