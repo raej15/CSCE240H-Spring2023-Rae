@@ -3,7 +3,9 @@
 // Author      : Rae Jones
 // Version     :
 // Copyright   : Your copyright notice
-// Credit      : https://www.geeksforgeeks.org/bubble-sort/#
+// Credit      : https://www.geeksforgeeks.org/bubble-sort/# //for bubble sorting
+// Credit      : https://stackoverflow.com/questions/13054243/set-one-array-equal-to-another-without-a-loop //for setting arrays equal
+// Credit      : https://www.geeksforgeeks.org/sorting-a-vector-in-c/# //for vector help
 // Description : HW6
 //============================================================================
 #include <algorithm>
