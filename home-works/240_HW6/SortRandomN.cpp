@@ -57,28 +57,11 @@ void printArray(int arr[], int size)
  
 int main() {
         int userInput;
-	    cout << "- - - - - - - - - - - - - - - - - - - - - - - - - \n\nWhat size would you like your array to be?" << endl;
+	    cout << "- - - - - - - - - - - - - - - - - - - - - - - - - \n\nWhat size would you like your array and vector to be?" << endl;
     
-        //cin >> userInput;
+        cin >> userInput;
 
-		userInput = 100000;
-        cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \n\nMaking your array...\n\nMay take up to 30 seconds if its size is ~ 100,000" << endl;
-
-	    // Get array starting timepoint
-        auto startArray = high_resolution_clock::now();
-
-		int arr[userInput];
-        popArray(userInput, arr);
-        int N = sizeof(arr) / sizeof(arr[0]);
-        bubbleSort(arr, N);
-        cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \n\nSorted array:\n\n";
-        printArray(arr, N);
-
-        //stopping clock
-	    auto stopArray = high_resolution_clock::now();
-
-        //getting array time
-	    auto durationArray = duration_cast<microseconds>(stopArray - startArray);
+		//userInput = 100000;
 
 
         // Get vector starting timepoint
@@ -102,6 +85,24 @@ int main() {
 	    auto stopVector = high_resolution_clock::now();
 
         auto durationVector = duration_cast<microseconds>(stopVector - startVector);
+
+        cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \n\nMaking your array...\n\nMay take up to 30 seconds if its size is ~ 100,000" << endl;
+
+	    // Get array starting timepoint
+        auto startArray = high_resolution_clock::now();
+
+		int arr[userInput];
+        popArray(userInput, arr);
+        int N = sizeof(arr) / sizeof(arr[0]);
+        bubbleSort(arr, N);
+        cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \n\nSorted array:\n\n";
+        printArray(arr, N);
+
+        //stopping clock
+	    auto stopArray = high_resolution_clock::now();
+
+        //getting array time
+	    auto durationArray = duration_cast<microseconds>(stopArray - startArray);
 
 	    cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - -\n\nArray Processing Time: " << durationArray.count() << " microseconds" << endl;
         cout << "\nVector Processing Time: " << durationVector.count() << " microseconds" << "\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
