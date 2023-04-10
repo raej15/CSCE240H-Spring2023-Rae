@@ -61,6 +61,11 @@ int main() {
     
         cin >> userInput;
 
+        if (userInput == 0) {
+            cout << "\nPlease enter an integer next time\nEXITING PROGRAM";
+            return 0;
+        }
+
 		//userInput = 100000;
 
 
@@ -105,7 +110,7 @@ int main() {
 	    auto durationArray = duration_cast<microseconds>(stopArray - startArray);
 
 	    cout << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - -\n\nArray Processing Time: " << durationArray.count() << " microseconds" << endl;
-        cout << "\nVector Processing Time: " << durationVector.count() << " microseconds" << "\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
+        cout << "\nVector Processing Time: " << durationVector.count() << " microseconds" << "\n\n- - - - - - - - - - - - - - - - - - - - - - - - - \nEXITING PROGRAM" << endl;
 
 	    return 0;
 }
